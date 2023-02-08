@@ -1,0 +1,50 @@
+import emailjs from '@emailjs/browser'
+import type { SyntheticEvent } from 'react'
+import { useState } from 'react'
+import '../styles/Form.css'
+
+interface Props {
+  nameTitle: string
+  namePlaceholder: string
+  emailTitle: string
+  emailPlaceholder: string
+  messageTitle: string
+  messagePlaceholder: string
+  button: string
+}
+
+export default function Form ({ nameTitle, namePlaceholder, emailTitle, emailPlaceholder, messageTitle, messagePlaceholder, button }: Props) {
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [message, setMessage] = useState('')
+
+  const handleSubmit = (e: SyntheticEvent): void => {
+    e.preventDefault()
+    const data = {
+      name,
+      email,
+      message
+    }
+    if (name !== undefined && email !== undefined && message !== undefined) {
+      emailjs.send('service_s768wth', 'template_dlc9irx', data, '4V_v3REMhscB-ql01')
+        .then((result) => {
+          console.log(result.text)
+        }, (error) => {
+          console.log(error.text)
+        })
+    }
+  }
+
+  // bg-[#CC9C00] border border-[#FFC60A] hover:scale-105 active:scale-100 disabled:bg-[#CC9C00] disabled:transform-none disabled:border-none
+  return (
+    <form onSubmit={handleSubmit} className='p-4 mt-4 shadow-lg bg-slate-700 flex flex-col gap-2 w-full sm:p-8 lg:w-3/4'>
+      <label className='form-subtitle text-slate-100' htmlFor='nameInput'>{nameTitle}</label>
+      <input onChange={(e) => setName(e.target.value)} required name='from_name' className='sm:px-4 p-2 sm:text-xl md:text-2xl rounded-md text-slate-900 bg-neutral-200' type='text' id='nameInput' placeholder={namePlaceholder} />
+      <label className='form-subtitle text-slate-100' htmlFor='emailInput'>{emailTitle}</label>
+      <input onChange={(e) => setEmail(e.target.value)} required name='email' className='sm:px-4 p-2 sm:text-xl md:text-2xl rounded-md text-slate-900 bg-neutral-200' type='email' pattern='^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$' id='emailInput' placeholder={emailPlaceholder} />
+      <label className='form-subtitle sm:mt-4 text-slate-100' htmlFor=''>{messageTitle}</label>
+      <textarea onChange={(e) => setMessage(e.target.value)} required name='message' className='p-2 sm:px-4 sm:text-xl md:text-2xl rounded-md text-slate-900 bg-neutral-200 resize-none' id='' cols={30} rows={5} placeholder={messagePlaceholder} />
+      <button className='form-btn py-2 px-4 w-fit mx-auto sm:mt-4 sm:px-8 sm:py-3 rounded-lg text-slate-900 bg-gradient-to-b from-[#FFC60A] to-[#FFC60A] hover:from-[#FED049] hover:to-[#FED049]'>{button}</button>
+    </form>
+  )
+}

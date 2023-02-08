@@ -1,0 +1,89 @@
+---
+import projects from '../../public/projects.json'
+export interface Props {
+  lang: string
+}
+
+const { lang } = Astro.props
+let imageClasses = 'overflow-hidden rounded-lg shadow-md image-container flex justify-center items-center '
+let descriptionClasses = 'sm:text-xl md:text-2xl lg:w-full text-slate-200 text-center lg:text-left '
+let skillsClasses = 'flex flex-wrap gap-4 justify-center lg:justify-start '
+let btnsClasses = 'flex gap-4 justify-center lg:justify-start '
+
+---
+<ul class='flex flex-col gap-4 py-6 lg:gap-14'>
+  {
+    projects.map(project => {
+      let titleClasses = 'text-center font-bold text-3xl md:text-4xl lg:text-start text-slate-100 '
+      let imageAndBtnsContainer = 'flex flex-col lg:flex-col lg:row-start-2 items-center gap-4 '
+      let infoContainer = 'lg:row-start-2 flex flex-col justify-around gap-4 '
+      let containerClasses = 'p-4 flex flex-col shadow-lg gap-2 bg-gradient-to-b from-slate-600 to-slate-700 text-slate-100 sm:gap-5 lg:grid lg:p-4 py-6 '
+
+      if (project.id % 2 === 0) {
+        titleClasses += 'lg:col-start-2'
+        imageAndBtnsContainer += 'lg:col-start-1'
+        infoContainer += 'lg:col-start-2'
+        containerClasses += 'lg:bg-gradient-to-l'
+			} else {
+        titleClasses += 'lg:col-start-1'
+        imageAndBtnsContainer += 'lg:col-start-2'
+        infoContainer += 'lg:col-start-1'
+        containerClasses += 'lg:bg-gradient-to-r'
+			}
+      return (
+      <li class={containerClasses}>
+        <h3 class={titleClasses}>{project.title}</h3>
+        <div class={imageAndBtnsContainer}>
+          <div class={imageClasses}>
+            <img class='h-full w-auto object-center rounded-lg' src={project.image} alt={project.title}>
+          </div>
+          <div class={btnsClasses}>
+            <a class='gthb-btn py-2 px-4 text-slate-200 border border-slate-500 rounded-lg h-fit text-sm' href={project.repo} target='_blank'>View on GitHub</a>
+            <a class='btn py-2 px-4 border border-slate-500 rounded-lg h-fit text-sm' href={project.url} target='_blank'>Visit page</a>
+          </div>
+        </div>
+        <div class={infoContainer}>
+          <p class={descriptionClasses}>
+            {lang === 'en' ? project.description.en : project.description.es}
+          </p>
+          <ul class={skillsClasses}>
+            {
+              project.skills && project.skills.map((skill) => {
+                  return (
+                    <li class='flex gap-2 items-center border border-slate-300 w-fit h-fit py-2 px-4'>
+                      <span class='h-6 w-6'>
+                        <img src={skill.icon} alt={`${skill.name} icon`} />
+                      </span>
+                      <span class='text-sm text-slate-200'>{skill.name}</span>
+                    </li>
+                  )
+                })
+              }
+          </ul>
+        </div>
+      </li>
+      )
+    })
+  }
+</ul>
+<style>
+  .image-container {
+    width: min(100%, 25rem);
+    height: min(40vw, 15rem);
+  }
+
+  .btn {
+  background-color: #CC9C00;
+  border: 1px solid #FFD449;
+  color: #1F2937;
+  }
+@media (hover:hover) {
+  .btn:hover {
+    background-color: #FFD449;
+  }
+  .gthb-btn:hover{
+    color: white;
+    border: 1px solid white;
+  }
+}
+</style>

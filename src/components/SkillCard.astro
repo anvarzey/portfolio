@@ -1,0 +1,15 @@
+---
+export interface Props {
+  icon: string;
+  skill: string;
+}
+
+const { icon, skill } = Astro.props;
+---
+
+<li class='w-20 h-28 py-4 shadow-lg shadow-slate-800 bg-slate-700 flex flex-col items-center sm:h-44 sm:w-36 sm:justify-around md:h-52 md:w-48'>
+    <img class='h-2/4' src={icon} alt={skill}>
+  <div class='mt-4 sm:text-xl text-slate-100'>
+    {skill}
+  </div>
+</li>

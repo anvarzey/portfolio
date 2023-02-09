@@ -6,7 +6,7 @@ export interface Props {
 
 const { lang } = Astro.props
 let imageClasses = 'overflow-hidden rounded-lg shadow-md image-container flex justify-center items-center '
-let descriptionClasses = 'sm:text-xl md:text-2xl lg:w-full text-slate-200 text-center lg:text-left '
+let descriptionClasses = 'text-slate-200 text-center sm:text-xl md:text-2xl lg:w-full lg:text-left '
 let skillsClasses = 'flex flex-wrap gap-4 justify-center lg:justify-start '
 let btnsClasses = 'flex gap-4 justify-center lg:justify-start '
 
@@ -14,10 +14,10 @@ let btnsClasses = 'flex gap-4 justify-center lg:justify-start '
 <ul class='flex flex-col gap-4 py-6 lg:gap-14'>
   {
     projects.map(project => {
-      let titleClasses = 'text-center font-bold text-3xl md:text-4xl lg:text-start text-slate-100 '
-      let imageAndBtnsContainer = 'flex flex-col lg:flex-col lg:row-start-2 items-center gap-4 '
-      let infoContainer = 'lg:row-start-2 flex flex-col justify-around gap-4 '
-      let containerClasses = 'p-4 flex flex-col shadow-lg gap-2 bg-gradient-to-b from-slate-600 to-slate-700 text-slate-100 sm:gap-5 lg:grid lg:p-4 py-6 '
+      let titleClasses = 'text-center font-bold text-3xl text-slate-100 md:text-4xl lg:text-start '
+      let imageAndBtnsContainer = 'flex flex-col items-center gap-4 lg:flex-col lg:row-start-2 '
+      let infoContainer = 'flex flex-col justify-around gap-4 lg:row-start-2 '
+      let containerClasses = 'p-4 flex flex-col shadow-lg gap-2 bg-gradient-to-b from-slate-600 to-slate-700 text-slate-100 py-6 sm:gap-5 lg:grid lg:p-4 '
 
       if (project.id % 2 === 0) {
         titleClasses += 'lg:col-start-2'

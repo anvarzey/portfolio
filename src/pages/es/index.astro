@@ -12,13 +12,13 @@ changeLanguage("es");
 
 <Layout title='Julián Varo | Web Developer'>
 	<header id='begin'>
-		<nav class='bg-[#000033] md:bg-transparent pt-4 px-6 md:absolute md:top-10 w-full sm:px-16 lg:px-20 xl:px-32 max-w-screen-xl xl:left-2/4 xl:-translate-x-2/4'>
-			<ul class='justify-between list-none flex md:justify-end text-slate-200'>
-				<li class='md:w-1/4 text-2xl lg:text-4xl relative'>
+		<nav class='pt-4 px-6 w-full max-w-screen-xl sm:px-16 md:absolute md:bg-transparent md:top-10 lg:px-20 xl:px-32 xl:left-2/4 xl:-translate-x-2/4'>
+			<ul class='justify-between list-none flex text-slate-200 md:justify-end'>
+				<li class='text-2xl relative md:w-1/4 lg:text-4xl'>
 					<h1 class='name'>Julián Varo</h1>
-			    <div class='text-slate-400 text-2xl absolute left-8'>@anvarzey</div>
+			    <div class='text-slate-400 text-xl absolute left-3 lg:text-2xl lg:left-8'>@anvarzey</div>
 				</li>
-				<li class='hidden md:flex w-1/6 items-center justify-end'>
+				<li class='hidden w-1/6 items-center justify-end md:flex'>
 					<a class='menu-item border-b-2 border-transparent hover:text-white hover:border-[#FBC505] transition duration-100 ease-in' href='#about'>{t('sections.about')}</a>
 				</li>
 				<li class='hidden md:flex w-1/6 items-center justify-end'>
@@ -30,7 +30,7 @@ changeLanguage("es");
 				<li class='hidden md:flex w-1/6 items-center justify-end'>
 					<a class='menu-item border-b-2 border-transparent hover:text-white hover:border-[#FBC505] transition duration-100 ease-in' href='#contact'>{t('sections.contact')}</a>
 				</li>
-				<li class='text-xs md:text-md md:w-1/6 flex items-center justify-end'>
+				<li class='text-xs flex items-center justify-end md:text-md md:w-1/6'>
 					<div class='flex text-black w-fit'>
 						{
 							i18next.language === 'en'
@@ -53,7 +53,7 @@ changeLanguage("es");
 		</nav>
 	</header>
 	<main class='max-w-screen-xl'>
-    <section class='first-section min-h-screen px-8 flex flex-col items-center justify-center sm:px-16 lg:px-20 md:flex-row-reverse xl:px-32'>
+    <section class='first-section min-h-screen px-8 flex flex-col items-center justify-center sm:px-16 md:flex-row-reverse lg:px-20 xl:px-32'>
       <div class='h-60 mx-auto mb-10 sm:h-72 md:h-96 lg:col-start-2'>
 				<img class='object-cover h-full rocket' src='/images/rocket.png' alt='Rocket'>
 			</div>
@@ -71,7 +71,7 @@ changeLanguage("es");
 				</div>
 				<div class='flex items-center gap-8 justify-center mt-8 sm:gap-16 md:justify-start lg:mt-16 third'>
 					<a class='w-10 h-10 sm:w-10 sm:h-10 lg:w-12 lg:h-12' href='https://github.com/anvarzey' target='_blank'>
-						<svg class='hover:fill-slate-100 fill-slate-500  transition ease-in delay-75' id='Layer_1' version='1.1' viewBox='0 0 512 512' xml:space='preserve' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' fill-rule='evenodd' clip-rule='evenodd'>
+						<svg class='hover:fill-slate-100 fill-slate-500 transition ease-in delay-75' id='Layer_1' version='1.1' viewBox='0 0 512 512' xml:space='preserve' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' fill-rule='evenodd' clip-rule='evenodd'>
 						<g>
 							<path class='st0' d='M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z'/>
 							</g>
@@ -107,7 +107,7 @@ changeLanguage("es");
 			</section>
 		<section class='min-h-screen px-8 flex flex-col items-center gap-8 sm:px-16 lg:px-20 xl:px-32'>
       <h2 id='skills' class='section-title text-[#FFC60A] text-center font-bold mt-10'>{t('sections.skills')}</h2>
-			<ul class='flex flex-wrap gap-4 sm:mt-20 sm:gap-y-8 lg:gap-10 lg:mt-0 justify-center'>
+			<ul class='flex flex-wrap gap-4 justify-center sm:mt-20 sm:gap-y-8 lg:gap-10 lg:mt-0'>
 				{
 					skills.map(skill => {
 							return (
@@ -121,12 +121,12 @@ changeLanguage("es");
 			<h2 id='projects' class='section-title text-[#FFC60A] text-center font-bold mt-10'>{t('sections.projects')}</h2>
 			<ProjectCards lang={i18next.language} />
 		</section>
-		<section class='min-h-screen px-8 flex flex-col items-center gap-4 sm:px-16 lg:px-20 xl:px-32 pb-10 lg:pb-16'>
+		<section class='min-h-screen px-8 flex flex-col items-center gap-4 pb-10 sm:px-16 lg:px-20 lg:pb-16 xl:px-32'>
 			<h2 id='contact' class='section-title text-[#FFC60A] text-center font-bold mt-10'>{t('sections.contact')}</h2>
-			  <h3 class='mt-10 sm:text-2xl md:text-3xl text-slate-100'>{t('contact.social.title')} <span class='italic'>@anvarzey</span> on:</h3>
+			  <h3 class='mt-10 text-slate-100 sm:text-2xl md:text-3xl'>{t('contact.social.title')} <span class='italic'>@anvarzey</span> on:</h3>
 				<ul class='mt-4 flex flex-wrap gap-4 justify-center md:gap-x-8'>
 					<li>
-					  <a class='flex items-center gap-2 bg-neutral-100 px-4 py-2 sm:text-xl sm:gap-4 sm:py-3 sm:px-6 md:text-2xl md:gap-5 md:py-4 md:px-8 md:hover:scale-105 transition duration-100 ease-in' href='https://github.com/anvarzey' target='_blank'>
+					  <a class='flex items-center gap-2 bg-neutral-100 px-4 py-2 transition duration-100 ease-in sm:text-xl sm:gap-4 sm:py-3 sm:px-6 md:text-2xl md:gap-5 md:py-4 md:px-8 md:hover:scale-105' href='https://github.com/anvarzey' target='_blank'>
 						  <span class='w-8 h-8 md:w-12 md:h-12'>
 							  <svg class='fill-black' id='Layer_1' version='1.1' viewBox='0 0 512 512' xml:space='preserve' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' fill-rule='evenodd' clip-rule='evenodd'>
 								<g>
@@ -148,7 +148,7 @@ changeLanguage("es");
 						</a>
 					</li> -->
 					<li class=''>
-						<a class='flex items-center gap-2 bg-[#55ACEE] px-4 py-2 sm:text-xl sm:gap-4 sm:py-3 sm:px-6 md:text-2xl md:gap-5 md:py-4 md:px-8 md:hover:scale-105 transition duration-100 ease-in' href='https://twitter.com/anvarzey' target='_blank'>
+						<a class='flex items-center gap-2 bg-[#55ACEE] px-4 py-2 transition duration-100 ease-in sm:text-xl sm:gap-4 sm:py-3 sm:px-6 md:text-2xl md:gap-5 md:py-4 md:px-8 md:hover:scale-105' href='https://twitter.com/anvarzey' target='_blank'>
 						  <span class='w-8 h-8 md:w-12 md:h-12'>
 								<svg enable-background='new 0 0 32 32' id='Layer_1' class='fill-white' version='1.0' viewBox='0 0 32 32' xml:space='preserve' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><path d='M31.993,6.077C30.816,6.6,29.552,6.953,28.223,7.11c1.355-0.812,2.396-2.098,2.887-3.63  c-1.269,0.751-2.673,1.299-4.168,1.592C25.744,3.797,24.038,3,22.149,3c-3.625,0-6.562,2.938-6.562,6.563  c0,0.514,0.057,1.016,0.169,1.496C10.301,10.785,5.465,8.172,2.227,4.201c-0.564,0.97-0.888,2.097-0.888,3.3  c0,2.278,1.159,4.286,2.919,5.464c-1.075-0.035-2.087-0.329-2.972-0.821c-0.001,0.027-0.001,0.056-0.001,0.082  c0,3.181,2.262,5.834,5.265,6.437c-0.55,0.149-1.13,0.23-1.729,0.23c-0.424,0-0.834-0.041-1.234-0.117  c0.834,2.606,3.259,4.504,6.13,4.558c-2.245,1.76-5.075,2.811-8.15,2.811c-0.53,0-1.053-0.031-1.566-0.092  C2.905,27.913,6.355,29,10.062,29c12.072,0,18.675-10.001,18.675-18.675c0-0.284-0.008-0.568-0.02-0.85  C30,8.55,31.112,7.395,31.993,6.077z' /><g/><g/><g/><g/><g/><g/></svg>
 							</span>
@@ -158,7 +158,7 @@ changeLanguage("es");
 						</a>
 					</li>
 				</ul>
-			  <h3 class='mt-16 sm:text-2xl md:text-3xl text-slate-100'>{t('contact.form.title')}</h3>
+			  <h3 class='mt-16 text-slate-100 sm:text-2xl md:text-3xl'>{t('contact.form.title')}</h3>
         <Form client:load nameTitle={t('contact.form.name')} namePlaceholder={t('contact.form.name-placeholder')} emailTitle={t('contact.form.email')} emailPlaceholder={t('contact.form.email-placeholder')} messageTitle={t('contact.form.message')} messagePlaceholder={t('contact.form.message-placeholder')} button={t('contact.form.button')} />
 		</section>
     <MobileNav />

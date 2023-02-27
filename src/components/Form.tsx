@@ -35,9 +35,8 @@ export default function Form ({ nameTitle, namePlaceholder, emailTitle, emailPla
     }
   }
 
-  // bg-[#CC9C00] border border-[#FFC60A] hover:scale-105 active:scale-100 disabled:bg-[#CC9C00] disabled:transform-none disabled:border-none
   return (
-    <form onSubmit={handleSubmit} className='p-4 mt-4 shadow-lg bg-slate-700 flex flex-col gap-2 w-full sm:p-8 lg:w-3/4'>
+    <form onSubmit={handleSubmit} className='p-4 mt-4 shadow-lg bg-cyan-700 flex flex-col gap-2 w-full sm:p-8 lg:w-3/4'>
       <label className='form-subtitle text-slate-100' htmlFor='nameInput'>{nameTitle}</label>
       <input onChange={(e) => setName(e.target.value)} required name='from_name' className='rounded-md text-slate-900 bg-neutral-200 sm:px-4 p-2 sm:text-xl md:text-2xl' type='text' id='nameInput' placeholder={namePlaceholder} />
       <label className='form-subtitle text-slate-100' htmlFor='emailInput'>{emailTitle}</label>

@@ -27,11 +27,16 @@
     "form": {
       "title": "Envíame un mensaje",
       "name": "Nombre",
-      "name-placeholder": "Juan Doe", 
-      "email": "Email", 
-      "email-placeholder": "ejemplo@email.com", 
-      "message": "Tu mensaje", 
+      "name-placeholder": "Juan Doe",
+      "name-missing": "Tu nombre es requerido",
+      "email": "Email",
+      "email-placeholder": "ejemplo@email.com",
+      "email-missing": "Tu correo es requerido",
+      "email-invalid": "Ingresa un email válido",
+      "message": "Tu mensaje",
       "message-placeholder": "Hola, me interesa hablarte sobre...",
+      "message-missing": "El mensaje no puede estar vacío",
+      "message-length": "El mensaje debe tener al menos 15 caracteres",
       "button": "Enviar"
     }
   }

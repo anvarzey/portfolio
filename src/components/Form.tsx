@@ -1,49 +1,94 @@
 import emailjs from '@emailjs/browser'
-import type { SyntheticEvent } from 'react'
-import { useState } from 'react'
 import '../styles/Form.css'
+import { FieldValues, SubmitHandler, useForm } from 'react-hook-form'
 
 interface Props {
   nameTitle: string
   namePlaceholder: string
+  nameMissing: string
   emailTitle: string
   emailPlaceholder: string
+  emailMissing: string
+  emailInvalid: string
   messageTitle: string
   messagePlaceholder: string
+  messageMissing: string
+  messageLength: string
   button: string
 }
 
-export default function Form ({ nameTitle, namePlaceholder, emailTitle, emailPlaceholder, messageTitle, messagePlaceholder, button }: Props) {
-  const [name, setName] = useState('')
-  const [email, setEmail] = useState('')
-  const [message, setMessage] = useState('')
-
-  const handleSubmit = (e: SyntheticEvent): void => {
-    e.preventDefault()
-    const data = {
-      name,
-      email,
-      message
+export default function Form ({
+  nameTitle,
+  namePlaceholder,
+  nameMissing,
+  emailTitle,
+  emailPlaceholder,
+  emailMissing,
+  emailInvalid,
+  messageTitle,
+  messagePlaceholder,
+  messageMissing,
+  messageLength,
+  button }: Props) {
+  const { register, handleSubmit, formState: { errors, isValid, isLoading, isSubmitting, isSubmitSuccessful }, reset } = useForm({
+    mode: 'onChange',
+    reValidateMode: 'onChange',
+    defaultValues: {
+      from_name: '',
+      email: '',
+      message: ''
     }
-    if (name !== undefined && email !== undefined && message !== undefined) {
+  })
+
+  const validateEmail = (value: string) => {
+    const validationRegex = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/
+
+    return validationRegex.test(value) || emailInvalid
+  }
+
+  const onSubmit: SubmitHandler<FieldValues> = (data) => {
+    try {
       emailjs.send('service_s768wth', 'template_dlc9irx', data, '4V_v3REMhscB-ql01')
         .then((result) => {
           console.log(result.text)
         }, (error) => {
-          console.log(error.text)
+          throw new Error('An error has been occurred: ', error.text)
         })
+    } catch (error) {
+      alert('An error has been occurred')
     }
   }
 
   return (
-    <form onSubmit={handleSubmit} className='p-4 mt-4 shadow-lg bg-cyan-700 flex flex-col gap-2 w-full sm:p-8 lg:w-3/4'>
-      <label className='form-subtitle text-slate-100' htmlFor='nameInput'>{nameTitle}</label>
-      <input onChange={(e) => setName(e.target.value)} required name='from_name' className='rounded-md text-slate-900 bg-neutral-200 sm:px-4 p-2 sm:text-xl md:text-2xl' type='text' id='nameInput' placeholder={namePlaceholder} />
-      <label className='form-subtitle text-slate-100' htmlFor='emailInput'>{emailTitle}</label>
-      <input onChange={(e) => setEmail(e.target.value)} required name='email' className='rounded-md text-slate-900 bg-neutral-200 sm:px-4 p-2 sm:text-xl md:text-2xl' type='email' pattern='^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$' id='emailInput' placeholder={emailPlaceholder} />
-      <label className='form-subtitle sm:mt-4 text-slate-100' htmlFor=''>{messageTitle}</label>
-      <textarea onChange={(e) => setMessage(e.target.value)} required name='message' className='p-2 rounded-md text-slate-900 bg-neutral-200 resize-none sm:px-4 sm:text-xl md:text-2xl' id='' cols={30} rows={5} placeholder={messagePlaceholder} />
-      <button className='form-btn py-2 px-4 w-fit mx-auto rounded-lg text-slate-900 bg-gradient-to-b from-[#FFC60A] to-[#FFC60A] sm:mt-4 sm:px-8 sm:py-3 hover:from-[#FED049] hover:to-[#FED049]'>{button}</button>
-    </form>
+    <div className='flex items-center justify-center w-full lg:w-3/4  mt-4'>
+      {
+        !isSubmitSuccessful
+          ? (<form onSubmit={handleSubmit(onSubmit)} className='p-4 shadow-lg bg-cyan-700 flex flex-col gap-2 w-full sm:p-8'>
+            <label className='form-subtitle text-slate-50' htmlFor='nameInput'>{nameTitle}</label>
+            <input {...register('from_name', { required: nameMissing })} className='rounded-md text-slate-900 bg-neutral-200 sm:px-4 p-2 sm:text-xl md:text-2xl' type='text' id='nameInput' placeholder={namePlaceholder} />
+            {
+              errors.from_name?.message !== undefined &&
+              (<p className='text-red-100'>{errors.from_name?.message}</p>)
+            }
+            <label className='form-subtitle text-slate-50' htmlFor='emailInput'>{emailTitle}</label>
+            <input {...register('email', { required: emailMissing, validate: validateEmail })} className='rounded-md text-slate-900 bg-neutral-200 sm:px-4 p-2 sm:text-xl md:text-2xl' id='emailInput' placeholder={emailPlaceholder} />
+            {
+              errors.email?.message !== undefined &&
+              (<p className='text-red-100'>{errors.email?.message}</p>)
+            }
+            <label className='form-subtitle sm:mt-4 text-slate-50' htmlFor=''>{messageTitle}</label>
+            <textarea {...register('message', { required: messageMissing, minLength: { value: 15, message: messageLength } })} className='p-2 rounded-md text-slate-900 bg-neutral-200 resize-none sm:px-4 sm:text-xl md:text-2xl' id='' cols={30} rows={5} placeholder={messagePlaceholder} />
+            {
+              errors.message?.message !== undefined &&
+              (<p className='text-red-100'>{errors.message?.message}</p>)
+            }
+            <button disabled={!isValid || isLoading || isSubmitting} className='form-btn py-2 px-4 w-fit mx-auto rounded-lg bg-[#CC9C00] border border-[#FFD449] text-cyan-900 sm:mt-4 sm:px-8 sm:py-3 hover:bg-[#FFD449] disabled:opacity-50 disabled:hover:bg-[#CC9C00]'>{button}</button>
+          </form>)
+          : (<div className='flex flex-col items-center justify-center gap-6 w-full h-48 border-2 border-green-700 bg-green-100 rounded-xl text-center'>
+            <div className='text-xl'>Your message has been sent successfully !</div>
+            <button className='hover:border hover:border-green-600 hover:text-green-500 py-2 px-4 text-green-600 border border-green-800 rounded-lg h-fit' onClick={() => reset()}>Send another message</button>
+          </div>)
+      }
+    </div>
   )
 }

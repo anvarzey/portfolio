@@ -27,11 +27,16 @@
     "form": {
       "title": "Send me a message",
       "name": "Name",
-      "name-placeholder": "John Doe", 
-      "email": "Email", 
-      "email-placeholder": "example@email.com", 
-      "message": "Your message", 
+      "name-placeholder": "John Doe",
+      "name-missing": "Name is required",
+      "email": "Email",
+      "email-placeholder": "example@email.com",
+      "email-missing": "Email is required",
+      "email-invalid": "Enter a valid email",
+      "message": "Your message",
       "message-placeholder": "Hi, I'm interested in having a chat with you about...",
+      "message-missing": "The message could not be empty",
+      "message-length": "Your message must be at least 15 characters long",
       "button": "Send"
     }
   }

@@ -1,4 +1,5 @@
 import GitHubIcon from "./icons/GitHubIcon"
+import LinkedinIcon from "./icons/LinkedinIcon"
 import TwitterIcon from './icons/TwitterIcon'
 
 interface Options {
@@ -14,12 +15,18 @@ interface Options {
     icon: string
     link: string
   }
+  Linkedin: {
+    containerClasses: string
+    nameClasses: string
+    icon: string
+    link: string
+  }
 }
 
 type KeywordProp = keyof Options
 
 export default function SocialButton ({ keyword }: { keyword: KeywordProp }) {
-  let containerDefaultClasses = 'flex items-center gap-2 px-4 py-2 transition duration-100 ease-in sm:text-xl sm:gap-4 sm:py-3 sm:px-6 md:text-2xl md:gap-5 md:py-4 md:px-8 md:hover:scale-105'
+  let containerDefaultClasses = 'flex items-center gap-2 px-4 py-2 transition duration-100 ease-in sm:text-xl sm:gap-4 sm:py-3 sm:px-6 md:text-2xl md:gap-5 md:py-4 md:px-8 md:hover:scale-105 rounded-md'
   const options: Options = {
     GitHub: {
       containerClasses: 'bg-neutral-100',
@@ -29,9 +36,15 @@ export default function SocialButton ({ keyword }: { keyword: KeywordProp }) {
     },
     Twitter: {
       containerClasses: 'bg-[#55ACEE]',
-      nameClasses: 'text-bold text-slate-100',
+      nameClasses: 'text-bold text-zinc-100',
       icon: '/icons/twitter.svg',
       link: 'https://twitter.com/anvarzey'
+    },
+    Linkedin: {
+      containerClasses: 'bg-[#007FB5]',
+      nameClasses: 'text-bold text-zinc-100',
+      icon: '/icons/linkedin.svg',
+      link: 'https://www.linkedin.com/in/juli%C3%A1n-varo-134759234/'
     }
   }
   return (
@@ -40,7 +53,9 @@ export default function SocialButton ({ keyword }: { keyword: KeywordProp }) {
         {
           keyword === 'GitHub'
             ? <GitHubIcon color='black' />
-            : <TwitterIcon color='white' />
+            : keyword === 'Twitter'
+              ? <TwitterIcon color='white' />
+              : <LinkedinIcon color='blue' />
         }
       </span>
       <span className={options[keyword].nameClasses}>{keyword}</span>

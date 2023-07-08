@@ -1,6 +1,6 @@
 {
   "meta-tags": {
-    "description": "My name is Julián Varo, I am a web developer based in Spain."
+    "description": "My name is Julian Varo, I am a freelance web developer. I am a passionate of UX and improving the applications' performance."
   },
   "sections": {
     "home": "Home",
@@ -16,13 +16,13 @@
   },
   "about": {
     "paragraph-1": "My first steps in coding were in high school, solving some exercises. Although I was interested in the subject and I was curious to learn more, I set it aside because I was mainly focused on playing football (soccer) and learning about sports.",
-    "paragraph-2": "In 2021 I returned to programming to find what I couldn't have seen before. After some searches and investigations, web development got my attention and I decided to go deeper.",
+    "paragraph-2": "In 2022 I returned to programming to find what I couldn't have seen before. After some searches and investigations, web development got my attention and I decided to go deeper.",
     "paragraph-3": "I learned through different resources from web and building projects. Now, I am exploring and improving my skills to develop a better software and give a better experience to the user."
   },
   "lang": "en",
   "contact": {
     "social": {
-      "title": "Find me on social media as"
+      "title": "Find me on social media"
     },
     "form": {
       "title": "Send me a message",

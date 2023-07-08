@@ -8,7 +8,7 @@ type Color = keyof Colors
 export default function GitHubIcon ({ color }: { color: Color }) {
   const COLORS: Colors = {
     black: '',
-    whiteOff: 'fill-slate-500 hover:fill-slate-50'
+    whiteOff: 'fill-zinc-500 hover:fill-zinc-50'
   }
   return (
     <svg className={`${COLORS[color]} transition ease-in delay-25`} id='Layer_1' version='1.1' viewBox='0 0 512 512' xmlSpace='preserve' xmlns='http://www.w3.org/2000/svg' xmlnsXlink='http://www.w3.org/1999/xlink' fillRule='evenodd' clipRule='evenodd'>

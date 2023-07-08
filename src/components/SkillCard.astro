@@ -7,9 +7,9 @@ export interface Props {
 const { icon, skill } = Astro.props;
 ---
 
-<li class='w-20 h-28 py-4 shadow-lg shadow-slate-700 bg-cyan-700 flex flex-col items-center sm:h-44 sm:w-36 sm:justify-around md:h-52 md:w-48'>
+<li class='w-20 h-28 py-4 rounded-lg bg-zinc-800 flex flex-col items-center sm:h-44 sm:w-36 sm:justify-around md:h-52 md:w-48'>
     <img class='h-2/4' src={icon} alt={skill}>
-  <div class='mt-4 sm:text-xl text-slate-50'>
+  <div class='mt-4 sm:text-xl text-zinc-50'>
     {skill}
   </div>
 </li>

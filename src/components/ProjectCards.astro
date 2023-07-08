@@ -5,41 +5,47 @@ export interface Props {
 }
 
 const { lang } = Astro.props
-let imageClasses = 'overflow-hidden rounded-lg shadow-md image-container flex justify-center items-center '
-let descriptionClasses = 'text-slate-50 text-center sm:text-xl md:text-2xl lg:w-full lg:text-left '
-let skillsClasses = 'flex flex-wrap gap-4 justify-center lg:justify-start '
+let imageClasses = 'overflow-hidden rounded-lg shadow-md image-container flex justify-center items-center w-full'
+let descriptionClasses = 'text-zinc-200 text-center sm:text-xl lg:text-2xl lg:w-full md:text-left '
+let skillsClasses = 'flex flex-wrap gap-2 md:gap-x-4 justify-center lg:justify-start '
 let btnsClasses = 'flex gap-4 justify-center lg:justify-start '
 
 ---
 <ul class='flex flex-col gap-4 py-6 lg:gap-14'>
   {
     projects.map(project => {
-      let titleClasses = 'text-center font-bold text-3xl text-slate-100 md:text-4xl lg:text-start '
-      let imageAndBtnsContainer = 'flex flex-col items-center gap-4 lg:flex-col lg:row-start-2 '
-      let infoContainer = 'flex flex-col gap-5 lg:row-start-2 '
-      let containerClasses = 'p-4 flex flex-col shadow-lg gap-2 bg-gradient-to-b from-cyan-700 to-cyan-900 text-slate-100 py-6 sm:gap-5 lg:grid lg:p-4 '
+      let titleClasses = 'text-center font-bold text-3xl text-zinc-200 mb-3 md:mb-0 md:text-4xl md:text-start italic '
+      let imageAndBtnsContainer = 'flex flex-col-reverse md:flex-col items-center gap-4 lg:flex-col md:row-start-2 '
+      let infoContainer = 'mt-4 md:mt-0 flex flex-col gap-8 lg:row-start-2 w-full '
+      let containerClasses = 'flex flex-col shadow-lg bg-zinc-800 rounded-lg text-zinc-100 gap-2 sm:gap-5 lg:gap-x-6 md:grid md:grid-cols-2 px-4 py-6 lg:px-8 lg:py-6 '
 
       if (project.id % 2 === 0) {
-        titleClasses += 'lg:col-start-2'
-        imageAndBtnsContainer += 'lg:col-start-1'
-        infoContainer += 'lg:col-start-2'
-        containerClasses += 'lg:bg-gradient-to-l'
+        titleClasses += 'md:col-start-2'
+        imageAndBtnsContainer += 'md:col-start-1'
+        infoContainer += 'md:col-start-2'
+        containerClasses += 'md:bg-gradient-to-l'
 			} else {
-        titleClasses += 'lg:col-start-1'
-        imageAndBtnsContainer += 'lg:col-start-2'
-        infoContainer += 'lg:col-start-1'
-        containerClasses += 'lg:bg-gradient-to-r'
+        titleClasses += 'md:col-start-1'
+        imageAndBtnsContainer += 'md:col-start-2'
+        infoContainer += 'md:col-start-1'
+        containerClasses += 'md:bg-gradient-to-r'
 			}
       return (
       <li class={containerClasses}>
-        <h3 class={titleClasses}>{project.title}</h3>
+        <h3 class={titleClasses}>
+          {project.title}
+        </h3>
         <div class={imageAndBtnsContainer}>
           <div class={imageClasses}>
             <img class='h-auto w-full object-center rounded-lg' src={project.image} alt={project.title} loading='lazy'>
           </div>
           <div class={btnsClasses}>
-            <a class='hover:border hover:border-white hover:text-white py-2 px-4 text-slate-100 border border-slate-300 rounded-lg h-fit text-sm' href={project.repo} target='_blank'>View on GitHub</a>
-            <a class='bg-[#CC9C00] border border-[#FFD449] text-cyan-900 py-2 px-4 rounded-lg h-fit text-sm hover:bg-[#FFD449]' href={project.url} target='_blank'>Visit page</a>
+            <a class='hover:border hover:border-white hover:text-white py-2 px-4 text-zinc-300 border border-zinc-400 rounded-lg h-fit text-sm' href={project.repo} target='_blank'>
+              View on GitHub
+            </a>
+            <a class='bg-[#CC9C00] border border-[#FFD449] text-zinc-800 py-2 px-4 rounded-lg h-fit text-sm hover:bg-[#FFD449]' href={project.url} target='_blank'>
+              Visit page
+            </a>
           </div>
         </div>
         <div class={infoContainer}>
@@ -50,11 +56,11 @@ let btnsClasses = 'flex gap-4 justify-center lg:justify-start '
             {
               project.skills && project.skills.map((skill) => {
                   return (
-                    <li class='flex gap-2 items-center border border-slate-300 w-fit h-fit py-2 px-4'>
-                      <span class='h-6 w-6'>
+                    <li class='flex gap-2 items-center border border-zinc-500 w-fit h-fit py-2 px-4'>
+                      <span class='h-4 w-4 lg:h-6 lg:w-6'>
                         <img src={skill.icon} alt={`${skill.name} icon`} />
                       </span>
-                      <span class='text-sm text-slate-50'>{skill.name}</span>
+                      <span class='text-sm text-zinc-200'>{skill.name}</span>
                     </li>
                   )
                 })

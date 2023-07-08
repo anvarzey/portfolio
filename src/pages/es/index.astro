@@ -10,72 +10,29 @@ import TwitterIcon from "../../components/icons/TwitterIcon";
 import GitHubIcon from "../../components/icons/GitHubIcon";
 import SocialButton from "../../components/SocialButton";
 import { Picture } from "@astrojs/image/components";
-import profileImage from "../../../public/images/photo.png";
+import LinkedinIcon from "../../components/icons/LinkedinIcon";
+import Navbar from "../../components/Navbar.astro";
 
 changeLanguage("es");
 ---
 
 <Layout title='Julian Varo | Web Developer'>
-	<header id='begin'>
-		<nav class='pt-4 px-6 w-full max-w-screen-xl bg-[#241564] sm:px-16 md:absolute md:bg-transparent md:top-10 lg:px-20 xl:px-32 xl:left-2/4 xl:-translate-x-2/4 z-10'>
-			<ul class='justify-between list-none flex text-slate-200 md:justify-end'>
-				<li class='text-2xl relative md:w-1/4 lg:text-4xl'>
-					<h1 class='name'>Julian Varo</h1>
-			    <div class='text-slate-400 text-xl absolute left-3 lg:text-2xl lg:left-8'>@anvarzey</div>
-				</li>
-				<li class='hidden w-1/6 items-center justify-end md:flex'>
-					<a class='menu-item border-b-2 border-transparent hover:text-white hover:border-[#FBC505] transition duration-100 ease-in' href='#about'>{t('sections.about')}</a>
-				</li>
-				<li class='hidden md:flex w-1/6 items-center justify-end'>
-					<a class='menu-item border-b-2 border-transparent hover:text-white hover:border-[#FBC505] transition duration-100 ease-in' href='#skills'>{t('sections.skills')}</a>
-				</li>
-				<li class='hidden md:flex w-1/6 items-center justify-end'>
-					<a class='menu-item border-b-2 border-transparent hover:text-white hover:border-[#FBC505] transition duration-100 ease-in' href='#projects'>{t('sections.projects')}</a>
-				</li>
-				<li class='hidden md:flex w-1/6 items-center justify-end'>
-					<a class='menu-item border-b-2 border-transparent hover:text-white hover:border-[#FBC505] transition duration-100 ease-in' href='#contact'>{t('sections.contact')}</a>
-				</li>
-				<li class='text-xs flex items-center justify-end md:text-md md:w-1/6'>
-					<div class='flex text-black w-fit'>
-						{
-							i18next.language === 'en'
-							  ? (
-									<>
-									  <span class='py-1 px-2 bg-slate-200 opacity-60 rounded-l-lg'>🇺🇸 EN</span>
-									  <a href='https://julivaro.com/es' class='py-1 px-2 bg-slate-200 border-l border-indigo-500 rounded-r-lg'>🇪🇸 ES</a>
-								  </>
-									)
-								: (
-                  <>
-									  <a href='https://julivaro.com/' class='py-1 px-2 bg-slate-200 border-r border-indigo-500 rounded-l-lg'>🇺🇸 EN</a>
-										<span class='py-1 px-2 bg-slate-200 opacity-60 rounded-r-lg'>🇪🇸 ES</span>
-									</>
-								)
-					}
-					</div>
-				</li>
-			</ul>
-		</nav>
-	</header>
-	<div class="h-screen w-screen overflow-hidden absolute top-0">
-		<div id='stars'></div>
-		<div id='stars2'></div>
-		<div id='stars3'></div>
-	</div>
-	<main class='max-w-screen-xl'>
-    <section class='first-section min-h-screen px-8 flex flex-col items-center justify-center sm:px-16 md:flex-row-reverse lg:px-20 xl:px-32 z-10'>
-      <div class='h-60 mx-auto mb-10 sm:h-72 md:h-96 lg:col-start-2'>
+	<div id='begin' class='h-screen max-w-screen overflow-hidden relative py-8 flex flex-col'>
+		<Navbar />
+		
+		<div class='grow flex flex-col items-center justify-around md:gap-10 md:flex-row-reverse px-16 lg:px-20 xl:px-32'>
+			<div class='h-60 mx-auto sm:h-72 md:h-96 lg:col-start-2 z-10'>
 				<img class='object-cover h-full rocket' src='/images/rocket.png' alt='Rocket'>
 			</div>
 			<div class='text-center md:text-start md:self-end mb-10 z-10'>
-				<div class='text-slate-100 mb-2 flex flex-col gap-4'>
+				<div class='text-zinc-100 mb-2 flex flex-col gap-4'>
 					<div class='text-2xl first'>
 						{t('home.greeting')}
 					</div>
-					<div class='text-3xl md:text-5xl second'>{t('home.presentation')}<span class='name'>Julian</span> | 
+					<div class='text-3xl md:text-5xl second'>{t('home.presentation')}<span class='name'>Julian</span> |
 					</div>
-					<div class='text-2xl md:text-5xl second'>Web Developer</div>
-					<div class='text-slate-300 text-lg md:text-3xl italic third'>
+					<div class='text-2xl md:text-5xl second'>Freelance Web Developer</div>
+					<div class='text-zinc-300 text-lg md:text-3xl italic third'>
 						{t('home.phrase')}
 					</div>
 				</div>
@@ -83,21 +40,31 @@ changeLanguage("es");
 					<a class='w-10 h-10 sm:w-10 sm:h-10 lg:w-12 lg:h-12' href='https://github.com/anvarzey' target='_blank'>
 						<GitHubIcon color='whiteOff' />
 					</a>
-					<!-- <a class='w-10 h-10 group sm:w-10 sm:h-10 lg:w-12 lg:h-12' href='#'>
-					</a> -->
+					<a class='w-10 h-10 sm:w-10 sm:h-10 lg:w-12 lg:h-12' href='https://www.linkedin.com/in/juli%C3%A1n-varo-134759234/' target='_blank'>
+						<LinkedinIcon color='whiteOff' />
+					</a>
 					<a class='w-10 h-10 sm:w-10 sm:h-10 lg:w-12 lg:h-12' href='https://twitter.com/anvarzey' target='_blank'>
 						<TwitterIcon color='whiteOff' />
 					</a>
 				</div>
 			</div>
-		</section>
+		</div>
+		<div class="h-screen w-screen overflow-hidden absolute top-0">
+			<div id='stars'></div>
+			<div id='stars2'></div>
+			<div id='stars3'></div>
+		</div>
+	</div>
+	<main class='max-w-screen-xl'>
+    <!-- <section class='first-section h-screen px-8 flex flex-col items-center justify-center sm:px-16 md:flex-row-reverse lg:px-20 xl:px-32 z-10'>
+		</section> -->
 		<section class='min-h-screen px-8 flex flex-col items-center gap-10 sm:px-16 lg:px-20 xl:px-32'>
       <h2 id='about' class='section-title text-[#FFC60A] text-center font-bold mt-10'>{t('sections.about')}</h2>
 			<article class='flex flex-col items-center lg:flex-row lg:gap-4 lg:justify-between'>
 				<div class='h-48 w-48 bg-gradient-to-tr from-cyan-500 to-blue-500 pt-2 rounded-xl flex flex-col items-center justify-center lg:h-full lg:w-80'>
-					<Picture src={profileImage} widths={[192, 320]} sizes='(max-width: 320px)' aspectRatio='160:213' alt='Julian Varo image' />
+					<Picture src='https://res.cloudinary.com/dfyxdowwb/image/upload/c_scale,q_auto:best,w_479/v1687118147/portfolio/photo_add1zr.webp' widths={[192, 320]} sizes='(max-width: 320px)' aspectRatio='160:213' alt='Julian Varo image' />
 				</div>
-				<div class='about-text lg:w-2/4 mt-20 lg:mt-0 text-slate-100'>
+				<div class='about-text lg:w-2/4 mt-20 lg:mt-0 text-zinc-100'>
 					<p>
 						{t('about.paragraph-1')}
 					</p>
@@ -128,26 +95,19 @@ changeLanguage("es");
 		</section>
 		<section class='min-h-screen px-8 flex flex-col items-center gap-4 pb-10 sm:px-16 lg:px-20 lg:pb-16 xl:px-32'>
 			<h2 id='contact' class='section-title text-[#FFC60A] text-center font-bold mt-10'>{t('sections.contact')}</h2>
-			  <h3 class='mt-10 text-slate-100 text-2xl md:text-3xl'>{t('contact.social.title')} <span class='italic'>@anvarzey</span> on:</h3>
+			  <h3 class='mt-10 text-zinc-100 text-2xl md:text-3xl italic'>{t('contact.social.title')}:</h3>
 				<ul class='mt-4 flex flex-wrap gap-4 justify-center md:gap-x-8'>
 					<li>
 					 <SocialButton keyword='GitHub' />
 					</li>
-					<!-- <li class=''>
-						<a class='flex items-center gap-2 bg-[#007FB5] px-4 py-2 sm:text-xl sm:gap-4 sm:py-3 sm:px-6 md:text-2xl md:gap-5 md:py-4 md:px-8 md:hover:-translate-y-1 transition duration-100 ease-in' href='#'>
-							<span class='w-8 h-8 md:w-12 md:h-12'>
-								<svg viewBox='0 0 64 64' xmlns='http://www.w3.org/2000/svg'><defs><style>.cls-1{fill:#000;}.cls-2{fill:#fff;}</style></defs><title/><g data-name='14-linkedin' id='_14-linkedin'><rect class='fill-white' height='64' rx='11.2' ry='11.2' width='64'/><rect class='fill-[#007FB5]' height='32.72' width='9.03' x='8.99' y='23.54'/><path class='fill-[#007FB5]' d='M48.2,23.54C41.54,21,36.72,25.3,34.66,27.7V23.54h-9V56.26h9V39a8.45,8.45,0,0,1,2.23-5.92,4.75,4.75,0,0,1,3.41-1.67A5.42,5.42,0,0,1,44.24,33a6.13,6.13,0,0,1,1.7,4.35V56.26H56.1V36S57.23,26.92,48.2,23.54Z'/><circle class='fill-[#007FB5]' cx='13.5' cy='13.38' r='5.64'/></g></svg>
-							</span>
-							<span class='text-white'>
-								Linkedin
-							</span>
-						</a>
-					</li> -->
+					<li class=''>
+						<SocialButton keyword='Linkedin' />
+					</li>
 					<li class=''>
 						<SocialButton keyword='Twitter' />
 					</li>
 				</ul>
-			  <h3 class='mt-16 text-slate-100 text-2xl md:text-3xl'>{t('contact.form.title')}</h3>
+			  <h3 class='mt-16 text-zinc-100 text-2xl md:text-3xl italic'>{t('contact.form.title')}</h3>
         <Form 
 				  client:load 
 				  nameTitle={t('contact.form.name')} 
@@ -165,8 +125,8 @@ changeLanguage("es");
 				/>
 		</section>
     <MobileNav />
-		<footer class='border-t border-sky-800 py-4 sm:py-6'>
-			<div class='footer-text text-slate-300 text-center'>Julian Varo | 2023</div>
+		<footer class='border-t border-zinc-800 py-4 sm:py-6'>
+			<div class='footer-text text-zinc-400 text-center'>Julian Varo | 2023</div>
 		</footer>
 	</main>
 </Layout>
@@ -178,16 +138,6 @@ changeLanguage("es");
 	.menu-item {
 		font-size: 1.1rem;
 	}
-	.first-section {
-  background: radial-gradient(circle at bottom, navy 0, #000033 100%);
-  height: 100vh;
-  overflow: hidden;
-  background: #241564;
-  background: -webkit-linear-gradient(top, #241564, #2B5876);
-  background: -moz-linear-gradient(top, #241564, #2B5876);
-  background: linear-gradient(to bottom, #241564, #2B5876);
-
-}
 	.name {
 		color: #FFC60A;
 		background-image: linear-gradient(to bottom, #FBC505, #f99b05);

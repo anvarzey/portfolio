@@ -3,7 +3,7 @@
     "id": 1,
     "title": "ronda matera",
     "description": {
-      "en": "Compare the prices for yerba-mate products selled in Spain. It also has a product recommendation quiz and a step-by-step guide to prepare mate tea. (I built a scraper to get the data, which is on my github)",
+      "en": "It is a web that compares the prices of yerba-mate products selled in Spain. It also has a product recommendation quiz and a step-by-step guide to prepare mate tea. (I built a scraper to get the data, which is on my github)",
       "es": "Comparador de precios de yerba mate vendida en España. Además, tiene un recomendador de productos con un cuestionario y una guía paso a paso de como preparar un mate. (Para obtener los datos construí un web scraper, el código se encuentra en mi GitHub)"
     },
     "image": "https://res.cloudinary.com/dfyxdowwb/image/upload/c_scale,w_1220/v1687118146/portfolio/ronda-matera_okztdu.webp",
@@ -29,10 +29,6 @@
       {
         "name": "Mongoose",
         "icon": "/icons/mongoose.svg"
-      },
-      {
-        "name": "Responsive Design",
-        "icon": "/icons/responsive.svg"
       }
     ]
   },

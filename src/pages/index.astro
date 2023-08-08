@@ -12,15 +12,39 @@ import SocialButton from "../components/SocialButton";
 import { Picture } from "@astrojs/image/components";
 import LinkedinIcon from "../components/icons/LinkedinIcon";
 import Navbar from "../components/Navbar.astro";
+import Reviews from "../components/Reviews";
 
 changeLanguage("en");
+
+const reviews = [
+    {
+        id: 0,
+        client: t("clients-reviews.0.client"),
+        review: t("clients-reviews.0.review")
+    },
+    {
+        id: 1,
+        client: t("clients-reviews.1.client"),
+        review: t("clients-reviews.1.review")
+    },
+    {
+        id: 2,
+        client: t("clients-reviews.2.client"),
+        review: t("clients-reviews.2.review")
+    },
+    {
+        id: 3,
+        client: t("clients-reviews.3.client"),
+        review: t("clients-reviews.3.review")
+    }
+];
 ---
 
 <Layout title='Julian Varo | Web Developer'>
 	<div id='begin' class='h-screen max-w-screen overflow-hidden relative py-8 flex flex-col'>
 		<Navbar />
 		
-		<div class='grow flex flex-col items-center justify-around md:gap-10 md:flex-row-reverse px-16 lg:px-20 xl:px-32'>
+		<div class='grow flex flex-col items-center justify-around md:gap-10 md:flex-row-reverse px-16 lg:px-20 xl:px-28'>
 			<div class='h-60 mx-auto sm:h-72 md:h-96 lg:col-start-2 z-10'>
 				<img class='object-cover h-full rocket' src='/images/rocket.png' alt='Rocket'>
 			</div>
@@ -56,7 +80,7 @@ changeLanguage("en");
 		</div>
 	</div>
 	<main class='max-w-screen-xl'>
-		<section class='min-h-screen px-8 flex flex-col items-center gap-10 sm:px-16 lg:px-20 xl:px-32'>
+		<div class='min-h-screen px-8 flex flex-col items-center gap-10 sm:px-16 lg:px-20 xl:px-28'>
       <h2 id='about' class='section-title text-[#FFC60A] text-center font-bold mt-10'>{t('sections.about')}</h2>
 			<article class='flex flex-col items-center lg:flex-row lg:gap-4 lg:justify-between'>
 				<div class='h-48 w-48 bg-gradient-to-tr from-cyan-500 to-blue-500 pt-2 rounded-xl flex flex-col items-center justify-center lg:h-full lg:w-80'>
@@ -74,8 +98,8 @@ changeLanguage("en");
 					</p>
 				</div>
 			</article>
-			</section>
-		<section class='min-h-screen px-8 flex flex-col items-center gap-8 sm:px-16 lg:px-20 xl:px-32'>
+			</div>
+		<div class='min-h-screen px-8 flex flex-col items-center gap-8 sm:px-16 lg:px-20 xl:px-28'>
       <h2 id='skills' class='section-title text-[#FFC60A] text-center font-bold mt-10'>{t('sections.skills')}</h2>
 			<ul class='flex flex-wrap gap-4 justify-center sm:mt-20 sm:gap-y-8 lg:gap-10 lg:mt-0'>
 				{
@@ -86,12 +110,16 @@ changeLanguage("en");
 					})
 				}
 			</ul>
-		</section>
-		<section class='min-h-screen px-8 flex flex-col items-center gap-4 sm:px-16 lg:px-20 xl:px-32'>
+		</div>
+		<div class='min-h-screen px-8 flex flex-col items-center gap-4 sm:px-16 lg:px-20 xl:px-28'>
 			<h2 id='projects' class='section-title text-[#FFC60A] text-center font-bold mt-10'>{t('sections.projects')}</h2>
 			<ProjectCards lang={i18next.language} />
-		</section>
-		<section class='min-h-screen px-8 flex flex-col items-center gap-4 pb-10 sm:px-16 lg:px-20 lg:pb-16 xl:px-32'>
+		</div>
+		<div class="h-screen flex flex-col gap-10 md:gap-20 px-8 sm:px-16 lg:px-20 xl:px-28">
+			<h2 class='section-title text-[#FFC60A] text-center font-bold mt-10'>{t('sections.clients-reviews')}</h2>
+			<Reviews client:load reviews={reviews} />
+		</div>
+		<div class='min-h-screen px-8 flex flex-col items-center gap-4 pb-10 sm:px-16 lg:px-20 lg:pb-16 xl:px-28'>
 			<h2 id='contact' class='section-title text-[#FFC60A] text-center font-bold mt-10'>{t('sections.contact')}</h2>
 			  <h3 class='mt-10 text-zinc-100 text-2xl md:text-3xl italic'>{t('contact.social.title')}:</h3>
 				<ul class='mt-4 flex flex-wrap gap-4 justify-center md:gap-x-8'>
@@ -102,7 +130,7 @@ changeLanguage("en");
 						<SocialButton keyword='Linkedin' />
 					</li>
 					<li class=''>
-						<SocialButton keyword='Twitter' />
+						<SocialButton keyword='X' />
 					</li>
 				</ul>
 			  <h3 class='mt-16 text-zinc-100 text-2xl md:text-3xl italic'>{t('contact.form.title')}</h3>
@@ -121,9 +149,9 @@ changeLanguage("en");
 					messageLength={t('contact.form.message-length')}
 				  button={t('contact.form.button')} 
 				/>
-		</section>
+		</div>
     <MobileNav />
-		<footer class='border-t border-zinc-800 py-4 sm:py-6'>
+		<footer class='border-t border-c-light-blue py-4 sm:py-6'>
 			<div class='footer-text text-zinc-400 text-center'>Julian Varo | 2023</div>
 		</footer>
 	</main>

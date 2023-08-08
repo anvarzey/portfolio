@@ -6,7 +6,8 @@
     "home": "Home",
     "about": "About",
     "skills": "Skills",
-    "projects": "Projects",
+    "projects": "Personal Projects",
+    "clients-reviews": "Clients' Reviews",
     "contact": "Contact"
   },
   "home": {
@@ -20,6 +21,24 @@
     "paragraph-3": "I learned through different resources from web and building projects. Now, I am exploring and improving my skills to develop a better software and give a better experience to the user."
   },
   "lang": "en",
+  "clients-reviews": {
+    "0": {
+      "review": "I recently had the pleasure of working with this Julian From the initial consultation to the delivery of the project, I was more than satisfied with the professionalism and quality of the work produced. He was able to quickly grasp my concept and make the necessary adjustments to ensure that my vision was clearly translated in the end product. Even when I had additional requests after the completion of the project, Julian was extremely accommodating, making sure that all my expectations were fully met. Highly recommended! 5 stars!",
+      "client": "Dominique"
+    },
+    "1": {
+      "review": "Well structure code, provided within the deadline that was really strict. Highly recommended professional.",
+      "client": "Valantis"
+    },
+    "2": {
+      "review": "An excellent experience. He is an expert and has an excellent communication. Very professional and good availability. I am going to keep working with him. I recommend him to everybody.",
+      "client": "Alejandro"
+    },
+    "3": {
+      "review": "Great professional. Great work",
+      "client": "Andro"
+    }
+  },
   "contact": {
     "social": {
       "title": "Find me on social media"

@@ -63,7 +63,7 @@ export default function Form ({
     <div className='flex items-center justify-center w-full lg:w-3/4  mt-4'>
       {
         !isSubmitSuccessful
-          ? (<form onSubmit={handleSubmit(onSubmit)} className='p-4 shadow-lg bg-zinc-800 rounded-lg flex flex-col gap-2 w-full sm:p-8'>
+          ? (<form onSubmit={handleSubmit(onSubmit)} className='p-4 shadow-lg bg-c-light-blue rounded-lg flex flex-col gap-2 w-full sm:p-8'>
             <label className='form-subtitle text-zinc-50' htmlFor='nameInput'>{nameTitle}</label>
             <input {...register('from_name', { required: nameMissing })} className='rounded-md text-zinc-900 bg-neutral-200 sm:px-4 p-2 sm:text-xl md:text-2xl outline-none' type='text' id='nameInput' placeholder={namePlaceholder} />
             {
@@ -82,7 +82,7 @@ export default function Form ({
               errors.message?.message !== undefined &&
               (<p className='text-red-100'>{errors.message?.message}</p>)
             }
-            <button disabled={!isValid || isLoading || isSubmitting} className='form-btn py-2 px-4 w-fit mx-auto rounded-lg bg-[#CC9C00] border border-[#FFD449] text-gray-800 sm:mt-4 sm:px-8 sm:py-3 hover:bg-[#FFD449] disabled:opacity-50 disabled:hover:bg-[#CC9C00]'>{button}</button>
+            <button disabled={!isValid || isLoading || isSubmitting} className='form-btn py-2 px-4 w-fit mx-auto rounded-lg bg-[#CC9C00] border border-[#FFD449] text-c-blue sm:mt-4 sm:px-8 sm:py-3 hover:bg-[#FFD449] disabled:opacity-50 disabled:hover:bg-[#CC9C00]'>{button}</button>
           </form>)
           : (<div className='flex flex-col items-center justify-center gap-6 w-full h-48 border-2 border-green-700 bg-green-100 rounded-xl text-center'>
             <div className='text-xl'>Your message has been sent successfully !</div>

@@ -6,7 +6,8 @@
     "home": "Inicio",
     "about": "Sobre mi",
     "skills": "Skills",
-    "projects": "Proyectos",
+    "projects": "Proyectos Personales",
+    "clients-reviews": "Opiniones de Clientes",
     "contact": "Contáctame"
   },
   "home": {
@@ -20,6 +21,24 @@
     "paragraph-3": "Mi aprendizaje fue a través de distintas herramientas en internet y construyendo proyectos. Sigo explorando y mejorando mis habilidades para desarrollar software de mejor calidad y brindar una mejor experiencia al usuario."
   },
   "lang": "es",
+  "clients-reviews": {
+    "0": {
+      "review": "He tenido recientemente el placer de trabajar con Julian, desde la consulta inicial hasta el día de entrega del proyecto he estado muy satisfecho con el profesionalismo y la calidad del trabajo producido. Fue capaz de entender mis requerimientos y hacer los ajustes necesarios para asegurar que mi visión se reflejaba en el producto final. Incluso cuando hice peticiones adicionales luego de concluido el proyecto, Julian se acomodó, asegurándose que mis expectativas fueran completamente logradas. ¡Muy recomendable! ¡5 estrellas!",
+      "client": "Dominique"
+    },
+    "1": {
+      "review": "Código bien estructurado, entregado dentro del plazo estipulado. Profesional altamente recomendable.",
+      "client": "Valantis"
+    },
+    "2": {
+      "review": "Una excelente experienza. El vendedor es muy experto y tiene excelente comunicacion. Muy profesional y disponible. Voy a seguir trabajando con el. Lo recomiendo ampliamente a todos",
+      "client": "Alejandro"
+    },
+    "3": {
+      "review": "Gran profesional. Gran trabajo",
+      "client": "Andro"
+    }
+  },
   "contact": {
     "social": {
       "title": "Encuéntrame en mis redes"

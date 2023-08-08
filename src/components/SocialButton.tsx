@@ -9,7 +9,7 @@ interface Options {
     icon: string
     link: string
   }
-  Twitter: {
+  X: {
     containerClasses: string
     nameClasses: string
     icon: string
@@ -34,8 +34,8 @@ export default function SocialButton ({ keyword }: { keyword: KeywordProp }) {
       icon: '/icons/github.svg',
       link: 'https://github.com/anvarzey'
     },
-    Twitter: {
-      containerClasses: 'bg-[#55ACEE]',
+    X: {
+      containerClasses: 'bg-black',
       nameClasses: 'text-bold text-zinc-100',
       icon: '/icons/twitter.svg',
       link: 'https://twitter.com/anvarzey'
@@ -53,7 +53,7 @@ export default function SocialButton ({ keyword }: { keyword: KeywordProp }) {
         {
           keyword === 'GitHub'
             ? <GitHubIcon color='black' />
-            : keyword === 'Twitter'
+            : keyword === 'X'
               ? <TwitterIcon color='white' />
               : <LinkedinIcon color='blue' />
         }

@@ -4,24 +4,24 @@ import i18next, { t, changeLanguage } from "i18next";
 const navItems = [
   {
     link: '#about',
-    text: 'About'
+    text: t('sections.about')
   },
   {
     link: '#skills',
-    text: 'Skills'
+    text: t('sections.skills')
   },
   {
     link: '#projects',
-    text: 'Projects'
+    text: t('sections.projects')
   },
   {
     link: '#contact',
-    text: 'Contact'
+    text: t('sections.contact')
   }
 ]
 ---
 
-<header class='w-full max-w-screen-xl flex items-center px-10 lg:px-20 xl:px-32'>
+<header class='w-full max-w-screen-xl flex items-center px-10 lg:px-20 xl:px-28'>
   <div class='md:w-1/4 flex flex-col z-10'>
     <h1 class='name text-2xl sm:text-3xl lg:text-4xl'>Julian Varo</h1>
     <div class='text-zinc-400 text-sm sm:text-base lg:text-lg  pl-6 sm:pl-8 lg:pl-12'>@anvarzey</div>
@@ -34,11 +34,11 @@ const navItems = [
     >
       {navItems.map(navItem => (
         <li
-          class='hidden md:flex w-1/6 items-center justify-end z-10'
+          class='hidden md:flex items-center w-1/4 justify-center z-10'
         >
           <a
             href={navItem.link}
-            class='menu-item border-b-2 border-transparent hover:text-white hover:border-[#FBC505] py-2 transition duration-100 ease-in'
+            class='text-md menu-item border-b-2 border-transparent hover:text-white hover:border-[#FBC505] py-2 transition duration-100 ease-in'
           >
             {navItem.text}
           </a>

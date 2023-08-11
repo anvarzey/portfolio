@@ -42,12 +42,6 @@
     "color": "CF649A"
   },
   {
-    "id": 8,
-    "name": "Firebase",
-    "image": "/icons/firebase.svg",
-    "color": "CF649A"
-  },
-  {
     "id": 9,
     "name": "Mongo DB",
     "image": "/icons/mongoDB.svg",

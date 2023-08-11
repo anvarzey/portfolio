@@ -33,7 +33,7 @@ export default function Reviews ({ reviews }: IProps): ReactElement {
             <BiSolidQuoteAltLeft className='h-full w-auto text-slate-100' />
           </div>
           <div className='grow flex flex-col items-start py-4'>
-            <p className='mb-4 md:tracking-wide md:text-lg text-ellipsis max-h-[40%] overflow-hidden w-full text-left'>
+            <p className='mb-4 text-ellipsis max-h-[40%] overflow-hidden w-full text-left md:tracking-wide md:text-lg lg:text-xl'>
               {
                 isClient ? reviews[current].review : ''
               }

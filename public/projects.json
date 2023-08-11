@@ -130,38 +130,5 @@
         "icon": "/icons/responsive.svg"
       }
     ]
-  },
-  {
-    "id": 5,
-    "title": "plenty",
-    "description": {
-      "en": "E-commerce using fetched data from fake store api and Context Api for state management of the cart.",
-      "es": "E-commerce en el cual utilicé Context Api para el manejo del estado del carrito y los datos son consumidos de una API externa (fake store api)."
-    },
-    "image": "https://res.cloudinary.com/dfyxdowwb/image/upload/c_scale,w_1220/v1687118148/portfolio/plenty_gfmuhc.webp",
-    "url": "https://plenty.netlify.app/",
-    "repo": "https://github.com/anvarzey/e-commerce-project",
-    "skills": [
-      {
-        "name": "React",
-        "icon": "/icons/react.svg"
-      },
-      {
-        "name": "CSS",
-        "icon": "/icons/css.svg"
-      },
-      {
-        "name": "External API",
-        "icon": "/icons/api.svg"
-      },
-      {
-        "name": "Javascript",
-        "icon": "/icons/javascript.svg"
-      },
-      {
-        "name": "Responsive Design",
-        "icon": "/icons/responsive.svg"
-      }
-    ]
   }
 ]

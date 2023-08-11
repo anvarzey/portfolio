@@ -109,15 +109,18 @@ const reviews = [
 							)
 					})
 				}
+				<li class='text-white flex items-start justify-center text-lg w-20 sm:w-36 md:w-48'>
+					...and more
+				</li>
 			</ul>
-		</div>
-		<div class='min-h-screen px-8 flex flex-col items-center gap-4 sm:px-16 lg:px-20 xl:px-28'>
-			<h2 id='projects' class='section-title text-[#FFC60A] text-center font-bold mt-10'>{t('sections.projects')}</h2>
-			<ProjectCards lang={i18next.language} />
 		</div>
 		<div class="h-screen flex flex-col gap-10 md:gap-20 px-8 sm:px-16 lg:px-20 xl:px-28">
 			<h2 class='section-title text-[#FFC60A] text-center font-bold mt-10'>{t('sections.clients-reviews')}</h2>
 			<Reviews client:load reviews={reviews} />
+		</div>
+		<div class='min-h-screen px-8 flex flex-col items-center gap-4 sm:px-16 lg:px-20 xl:px-28'>
+			<h2 id='projects' class='section-title text-[#FFC60A] text-center font-bold mt-10'>{t('sections.projects')}</h2>
+			<ProjectCards lang={i18next.language} />
 		</div>
 		<div class='min-h-screen px-8 flex flex-col items-center gap-4 pb-10 sm:px-16 lg:px-20 lg:pb-16 xl:px-28'>
 			<h2 id='contact' class='section-title text-[#FFC60A] text-center font-bold mt-10'>{t('sections.contact')}</h2>

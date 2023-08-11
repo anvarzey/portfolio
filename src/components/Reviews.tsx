@@ -1,6 +1,8 @@
 import { useState, type ReactElement, useEffect } from 'react'
-import { AiFillStar } from 'react-icons/ai'
-import { BiSolidQuoteAltLeft } from 'react-icons/bi'
+import QuoteIcon from './icons/QuoteIcon'
+import StarIcon from './icons/StarIcon'
+// import { AiFillStar } from 'react-icons/ai'
+// import { BiSolidQuoteAltLeft } from 'react-icons/all-files/bi/BiSolidQuoteAltLeft'
 
 interface IReview {
   id: number
@@ -29,8 +31,8 @@ export default function Reviews ({ reviews }: IProps): ReactElement {
     <div className='grow overflow-hidden'>
       <div className='px-10 py-12 h-full bg-c-light-blue rounded-xl text-slate-100 flex flex-col items-center justify-around'>
         <div className='grow w-full flex items-start gap-2'>
-          <div className='h-10 w-16'>
-            <BiSolidQuoteAltLeft className='h-full w-auto text-slate-100' />
+          <div className='h-10 w-16 text-3xl text-white'>
+            <QuoteIcon />
           </div>
           <div className='grow flex flex-col items-start py-4'>
             <p className='mb-4 text-ellipsis max-h-[40%] overflow-hidden w-full text-left md:tracking-wide md:text-lg lg:text-xl'>
@@ -45,12 +47,12 @@ export default function Reviews ({ reviews }: IProps): ReactElement {
                   isClient ? reviews[current].client : 'Random'
                 }
               </h3>
-              <div className='flex items-center text-c-yellow'>
-                <AiFillStar />
-                <AiFillStar />
-                <AiFillStar />
-                <AiFillStar />
-                <AiFillStar />
+              <div className='flex items-center gap-1 text-c-yellow'>
+                <StarIcon />
+                <StarIcon />
+                <StarIcon />
+                <StarIcon />
+                <StarIcon />
               </div>
             </div>
           </div>

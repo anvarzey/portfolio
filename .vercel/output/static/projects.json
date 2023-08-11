@@ -1,0 +1,134 @@
+[
+  {
+    "id": 1,
+    "title": "ronda matera",
+    "description": {
+      "en": "It is a web that compares the prices of yerba-mate products selled in Spain. It also has a product recommendation quiz and a step-by-step guide to prepare mate tea. (I built a scraper to get the data, which is on my github)",
+      "es": "Comparador de precios de yerba mate vendida en España. Además, tiene un recomendador de productos con un cuestionario y una guía paso a paso de como preparar un mate. (Para obtener los datos construí un web scraper, el código se encuentra en mi GitHub)"
+    },
+    "image": "https://res.cloudinary.com/dfyxdowwb/image/upload/c_scale,w_1220/v1687118146/portfolio/ronda-matera_okztdu.webp",
+    "url": "https://rondamatera.vercel.app/",
+    "repo": "https://github.com/anvarzey/ronda-matera",
+    "skills": [
+      {
+        "name": "React",
+        "icon": "/icons/react.svg"
+      },
+      {
+        "name": "Next js",
+        "icon": "/icons/nextjs.svg"
+      },
+      {
+        "name": "Typescript",
+        "icon": "/icons/typescript.svg"
+      },
+      {
+        "name": "Node js",
+        "icon": "/icons/node.svg"
+      },
+      {
+        "name": "Mongoose",
+        "icon": "/icons/mongoose.svg"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "fasechat",
+    "description": {
+      "en": "Chat room using Realtime Database, storage and Google Auth from Firebase.",
+      "es": "Chat room que utiliza Realtime Database, storage y Google Auth de Firebase."
+    },
+    "image": "https://res.cloudinary.com/dfyxdowwb/image/upload/c_scale,w_1220/v1687118142/portfolio/fasechat_jmjfsq.webp",
+    "url": "https://fasechat.vercel.app/",
+    "repo": "https://github.com/anvarzey/fasechat",
+    "skills": [
+      {
+        "name": "React",
+        "icon": "/icons/react.svg"
+      },
+      {
+        "name": "Firebase",
+        "icon": "/icons/firebase.svg"
+      },
+      {
+        "name": "Next js",
+        "icon": "/icons/nextjs.svg"
+      },
+      {
+        "name": "Javascript",
+        "icon": "/icons/javascript.svg"
+      },
+      {
+        "name": "Responsive Design",
+        "icon": "/icons/responsive.svg"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "pipi-dashboard",
+    "description": {
+      "en": "Dashboard of a bakery that tracks sales information, products' reviews and other relevant information.",
+      "es": "Dashboard de una panadería, que recopila información relevante sobre la actividad del negocio."
+    },
+    "image": "https://res.cloudinary.com/dfyxdowwb/image/upload/c_scale,w_1220/v1687117884/portfolio/pipi-dashboard_tlx1h0.webp",
+    "url": "https://pipi-dashboard.vercel.app/",
+    "repo": "https://github.com/anvarzey/pipi-dashboard",
+    "skills": [
+      {
+        "name": "Next js",
+        "icon": "/icons/nextjs.svg"
+      },
+      {
+        "name": "Material UI",
+        "icon": "/icons/material-ui.svg"
+      },
+      {
+        "name": "Mongoose",
+        "icon": "/icons/mongoose.svg"
+      },
+      {
+        "name": "Typescript",
+        "icon": "/icons/typescript.svg"
+      },
+      {
+        "name": "Mongo DB",
+        "icon": "/icons/mongoDB.svg"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "shortly",
+    "description": {
+      "en": "Url shortener landing page. In this project, tailwind is used for styles, local storage to save the data and an external API to get the results. Challenge by frontend mentor.",
+      "es": "Landing page de un acortador de urls. Usé tailwind para los estilos, la local storage para guardar los datos y una API externa para obtener los resultados. Reto de frontend mentor."
+    },
+    "image": "https://res.cloudinary.com/dfyxdowwb/image/upload/c_scale,w_1220/v1687118143/portfolio/shortly_q8dg9p.webp",
+    "url": "https://shortyurlch.netlify.app/",
+    "repo": "https://github.com/anvarzey/url-shortening",
+    "skills": [
+      {
+        "name": "React",
+        "icon": "/icons/react.svg"
+      },
+      {
+        "name": "External API",
+        "icon": "/icons/api.svg"
+      },
+      {
+        "name": "Tailwind",
+        "icon": "/icons/tailwind.svg"
+      },
+      {
+        "name": "Javascript",
+        "icon": "/icons/javascript.svg"
+      },
+      {
+        "name": "Responsive Design",
+        "icon": "/icons/responsive.svg"
+      }
+    ]
+  }
+]

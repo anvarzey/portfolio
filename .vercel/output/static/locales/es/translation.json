@@ -1,0 +1,62 @@
+{
+  "meta-tags": {
+    "description": "Mi nombre es Julian Varo, soy desarrollador web freelance. Entusiasta de brindar una gran experiencia de usuario y mejorar el rendimiento de aplicaciones."
+  },
+  "sections": {
+    "home": "Inicio",
+    "about": "Sobre mi",
+    "skills": "Skills",
+    "projects": "Proyectos Personales",
+    "clients-reviews": "Opiniones de Clientes",
+    "contact": "Contáctame"
+  },
+  "home": {
+    "greeting": "Hola 👋",
+    "presentation": "Soy ",
+    "phrase": "Me encanta construir aplicaciones interesantes que generen valor para la gente."
+  },
+  "about": {
+    "paragraph-1": "Mis primeros pasos en programación fueron en la escuela secundaria, resolviendo algunos ejercicios. Aunque me interesaba la materia y sentía la curiosidad por saber mas, estaba enfocado en jugar al fútbol y mi atención la dirigí principalmente hacia el deporte.",
+    "paragraph-2": "En 2022 retomé la programación y me dispuse a encontrar una rama para profundizar dentro de este área. Después de algunas búsquedas e investigaciones, el desarrollo web obtuvo atención y decidí emprender este camino.",
+    "paragraph-3": "Mi aprendizaje fue a través de distintas herramientas en internet y construyendo proyectos. Sigo explorando y mejorando mis habilidades para desarrollar software de mejor calidad y brindar una mejor experiencia al usuario."
+  },
+  "lang": "es",
+  "clients-reviews": {
+    "0": {
+      "review": "He tenido recientemente el placer de trabajar con Julian, desde la consulta inicial hasta el día de entrega del proyecto he estado muy satisfecho con el profesionalismo y la calidad del trabajo producido. Fue capaz de entender mis requerimientos y hacer los ajustes necesarios para asegurar que mi visión se reflejaba en el producto final. Incluso cuando hice peticiones adicionales luego de concluido el proyecto, Julian se acomodó, asegurándose que mis expectativas fueran completamente logradas. ¡Muy recomendable! ¡5 estrellas!",
+      "client": "Dominique"
+    },
+    "1": {
+      "review": "Código bien estructurado, entregado dentro del plazo estipulado. Profesional altamente recomendable.",
+      "client": "Valantis"
+    },
+    "2": {
+      "review": "Una excelente experienza. El vendedor es muy experto y tiene excelente comunicacion. Muy profesional y disponible. Voy a seguir trabajando con el. Lo recomiendo ampliamente a todos",
+      "client": "Alejandro"
+    },
+    "3": {
+      "review": "Gran profesional. Gran trabajo",
+      "client": "Andro"
+    }
+  },
+  "contact": {
+    "social": {
+      "title": "Encuéntrame en"
+    },
+    "form": {
+      "title": "Envíame un mensaje",
+      "name": "Nombre",
+      "name-placeholder": "Juan Doe",
+      "name-missing": "Tu nombre es requerido",
+      "email": "Email",
+      "email-placeholder": "ejemplo@email.com",
+      "email-missing": "Tu correo es requerido",
+      "email-invalid": "Ingresa un email válido",
+      "message": "Tu mensaje",
+      "message-placeholder": "Hola, me interesa hablarte sobre...",
+      "message-missing": "El mensaje no puede estar vacío",
+      "message-length": "El mensaje debe tener al menos 15 caracteres",
+      "button": "Enviar"
+    }
+  }
+}

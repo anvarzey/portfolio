@@ -34,6 +34,43 @@
   },
   {
     "id": 2,
+    "title": "restaurant-booking",
+    "description": {
+      "en": "Booking system of a restaurant, with the option to order at that time and checkout.",
+      "es": "Sistema de reservas de un restaurante, con la opción de ordenar al mismo tiempo y pagar online por ello."
+    },
+    "image": "https://res.cloudinary.com/dfyxdowwb/image/upload/c_scale,q_auto:best,w_1220/v1691963569/portfolio/brewery_axcngt.webp",
+    "url": "https://restaurant-booking-tau.vercel.app/",
+    "repo": "https://github.com/anvarzey/restaurant-booking",
+    "skills": [
+      {
+        "name": "Next js",
+        "icon": "/icons/nextjs.svg"
+      },
+      {
+        "name": "Typescript",
+        "icon": "/icons/typescript.svg"
+      },
+      {
+        "name": "Prisma",
+        "icon": "/icons/prisma.svg"
+      },
+      {
+        "name": "Mongo DB",
+        "icon": "/icons/mongoDB.svg"
+      },
+      {
+        "name": "Zustand",
+        "icon": "/icons/zustand.ico"
+      },
+      {
+        "name": "Tailwind",
+        "icon": "/icons/tailwind.svg"
+      }
+    ]
+  },
+  {
+    "id": 3,
     "title": "fasechat",
     "description": {
       "en": "Chat room using Realtime Database, storage and Google Auth from Firebase.",
@@ -66,7 +103,7 @@
     ]
   },
   {
-    "id": 3,
+    "id": 4,
     "title": "pipi-dashboard",
     "description": {
       "en": "Dashboard of a bakery that tracks sales information, products' reviews and other relevant information.",
@@ -99,7 +136,7 @@
     ]
   },
   {
-    "id": 4,
+    "id": 5,
     "title": "shortly",
     "description": {
       "en": "Url shortener landing page. In this project, tailwind is used for styles, local storage to save the data and an external API to get the results. Challenge by frontend mentor.",
@@ -128,35 +165,6 @@
       {
         "name": "Responsive Design",
         "icon": "/icons/responsive.svg"
-      }
-    ]
-  },
-  {
-    "id": 4,
-    "title": "restaurant-booking",
-    "description": {
-      "en": "Booking system of a restaurant, with the option to order at that time and checkout.",
-      "es": "Sistema de reservas de un restaurante, con la opción de ordenar al mismo tiempo y pagar online por ello."
-    },
-    "image": "https://res.cloudinary.com/dfyxdowwb/image/upload/c_scale,q_auto:best,w_1220/v1691963569/portfolio/brewery_axcngt.webp",
-    "url": "https://restaurant-booking-tau.vercel.app/",
-    "repo": "https://github.com/anvarzey/restaurant-booking",
-    "skills": [
-      {
-        "name": "Next js",
-        "icon": "/icons/nextjs.svg"
-      },
-      {
-        "name": "Typescript",
-        "icon": "/icons/typescript.svg"
-      },
-      {
-        "name": "Mongo DB",
-        "icon": "/icons/mongoDB.svg"
-      },
-      {
-        "name": "Tailwind",
-        "icon": "/icons/tailwind.svg"
       }
     ]
   }

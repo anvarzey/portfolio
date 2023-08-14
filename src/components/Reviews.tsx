@@ -1,8 +1,6 @@
 import { useState, type ReactElement, useEffect } from 'react'
 import QuoteIcon from './icons/QuoteIcon'
 import StarIcon from './icons/StarIcon'
-// import { AiFillStar } from 'react-icons/ai'
-// import { BiSolidQuoteAltLeft } from 'react-icons/all-files/bi/BiSolidQuoteAltLeft'
 
 interface IReview {
   id: number

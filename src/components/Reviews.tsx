@@ -55,7 +55,7 @@ export default function Reviews ({ reviews }: IProps): ReactElement {
             </div>
           </div>
         </div>
-        <div className='flex items-center gap-2'>
+        <div className='flex items-center gap-4'>
           {
             reviews.map(review => (
               <button

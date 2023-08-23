@@ -13,7 +13,10 @@
   "home": {
     "greeting": "Hello there 👋",
     "presentation": "I am ",
-    "phrase": "I love building beautiful applications that generate value for the people."
+    "phrase": "I love building beautiful applications that generate value for the people.",
+    "aria-label-github": "Go to my Github profile",
+    "aria-label-linkedin": "Go to my Linkedin profile",
+    "aria-label-twitter": "Go to my X profile (former Twitter)"
   },
   "about": {
     "paragraph-1": "My first steps in coding were in high school, solving some exercises. Although I was interested in the subject and I was curious to learn more, I set it aside because I was mainly focused on playing football (soccer) and learning about sports.",

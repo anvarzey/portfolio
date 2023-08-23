@@ -13,7 +13,10 @@
   "home": {
     "greeting": "Hola 👋",
     "presentation": "Soy ",
-    "phrase": "Me encanta construir aplicaciones interesantes que generen valor para la gente."
+    "phrase": "Me encanta construir aplicaciones interesantes que generen valor para la gente.",
+    "aria-label-github": "Ir a mi perfil de Github",
+    "aria-label-linkedin": "Ir a mi perfil de Linkedin",
+    "aria-label-twitter": "Ir a mi perfil de X (antes Twitter)"
   },
   "about": {
     "paragraph-1": "Mis primeros pasos en programación fueron en la escuela secundaria, resolviendo algunos ejercicios. Aunque me interesaba la materia y sentía la curiosidad por saber mas, estaba enfocado en jugar al fútbol y mi atención la dirigí principalmente hacia el deporte.",

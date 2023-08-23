@@ -58,7 +58,7 @@ export default function Reviews ({ reviews }: IProps): ReactElement {
         <div className='flex items-center gap-4'>
           {
             reviews.map(review => (
-              <button
+              <span
                 key={review.id}
                 className={`w-4 h-4 rounded-full ${current === review.id ? 'bg-c-yellow' : 'bg-c-blue'} cursor-pointer`}
                 onClick={() => handleReview(review.id)}

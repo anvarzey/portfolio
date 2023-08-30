@@ -4,9 +4,9 @@
   },
   "sections": {
     "home": "Inicio",
-    "about": "Sobre mi",
-    "skills": "Skills",
-    "projects": "Proyectos Personales",
+    "about": "Sobre mí",
+    "stack": "Stack",
+    "projects": "Proyectos",
     "clients-reviews": "Opiniones de Clientes",
     "contact": "Contáctame"
   },
@@ -19,11 +19,18 @@
     "aria-label-twitter": "Ir a mi perfil de X (antes Twitter)"
   },
   "about": {
-    "paragraph-1": "Mis primeros pasos en programación fueron en la escuela secundaria, resolviendo algunos ejercicios. Aunque me interesaba la materia y sentía la curiosidad por saber mas, estaba enfocado en jugar al fútbol y mi atención la dirigí principalmente hacia el deporte.",
-    "paragraph-2": "En 2022 retomé la programación y me dispuse a encontrar una rama para profundizar dentro de este área. Después de algunas búsquedas e investigaciones, el desarrollo web obtuvo atención y decidí emprender este camino.",
-    "paragraph-3": "Mi aprendizaje fue a través de distintas herramientas en internet y construyendo proyectos. Sigo explorando y mejorando mis habilidades para desarrollar software de mejor calidad y brindar una mejor experiencia al usuario."
+    "paragraph-1": "Soy un desarrollador full-stack versátil y entusiasta. Me dedico a construir destacadas experiencias digitales.",
+    "paragraph-2": "A la hora de desarrollar una aplicación, mi foco está en que ésta se centre en el usuario, de manera que el frontend le ofrezca una gran experiencia al usuario y refleje fielmente el mensaje del proyecto. Por su parte, el backend debe ser robusto, con su adecuada seguridad y efectividad.",
+    "paragraph-3": "Cada vez que tomo un proyecto, me sumerjo en él para comprender su contexto y así proveer la solución que mejor se adapte a sus necesidades."
   },
   "lang": "es",
+  "stack": {
+    "titles": {
+      "backend": "Backend",
+      "frontend": "Frontend",
+      "languages": "Lenguajes de programación"
+    }
+  },
   "clients-reviews": {
     "0": {
       "review": "He tenido recientemente el placer de trabajar con Julian, desde la consulta inicial hasta el día de entrega del proyecto he estado muy satisfecho con el profesionalismo y la calidad del trabajo producido. Fue capaz de entender mis requerimientos y hacer los ajustes necesarios para asegurar que mi visión se reflejaba en el producto final. Incluso cuando hice peticiones adicionales luego de concluido el proyecto, Julian se acomodó, asegurándose que mis expectativas fueran completamente logradas. ¡Muy recomendable! ¡5 estrellas!",

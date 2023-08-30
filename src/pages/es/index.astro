@@ -2,8 +2,6 @@
 import Layout from "../../layouts/Layout.astro";
 import Form from "../../components/Form";
 import MobileNav from "../../components/MobileNav.astro";
-import SkillCard from "../../components/SkillCard.astro";
-import skills from "../../../public/skills.json";
 import i18next, { t, changeLanguage } from "i18next";
 import ProjectCards from "../../components/ProjectCards.astro";
 import TwitterIcon from "../../components/icons/TwitterIcon";
@@ -13,6 +11,7 @@ import { Picture } from "@astrojs/image/components";
 import LinkedinIcon from "../../components/icons/LinkedinIcon";
 import Navbar from "../../components/Navbar.astro";
 import Reviews from "../../components/Reviews";
+import StackTable from "../../components/StackTable.astro";
 
 changeLanguage("es");
 
@@ -44,11 +43,11 @@ const reviews = [
 	<div id='begin' class='h-screen max-w-screen overflow-hidden relative py-8 flex flex-col'>
 		<Navbar />
 		
-		<div class='grow flex flex-col items-center justify-around md:gap-10 md:flex-row-reverse px-16 lg:px-20 xl:px-28'>
+		<div class='grow flex flex-col items-center justify-around px-16 md:gap-10 md:flex-row-reverse lg:px-20 xl:px-28'>
 			<div class='h-60 mx-auto sm:h-72 md:h-96 lg:col-start-2 z-10'>
 				<img class='object-cover h-full rocket' src='/images/rocket.png' alt='Rocket'>
 			</div>
-			<div class='text-center md:text-start md:self-end mb-10 z-10'>
+			<div class='text-center mb-10 z-10 md:text-start md:self-end'>
 				<div class='text-zinc-100 mb-2 flex flex-col gap-4'>
 					<div class='text-2xl first'>
 						{t('home.greeting')}
@@ -99,30 +98,19 @@ const reviews = [
 				</div>
 			</article>
 			</div>
-		<div class='min-h-screen px-8 flex flex-col items-center gap-8 sm:px-16 lg:px-20 xl:px-28'>
-      <h2 id='skills' class='section-title text-[#FFC60A] text-center font-bold mt-10'>{t('sections.skills')}</h2>
-			<ul class='flex flex-wrap gap-4 justify-center sm:mt-20 sm:gap-y-8 lg:gap-10 lg:mt-0'>
-				{
-					skills.map(skill => {
-							return (
-								<SkillCard icon={skill.image} skill={skill.name} />
-							)
-					})
-				}
-				<li class='text-white flex items-center md:items-start justify-center text-lg w-24 sm:w-36 md:w-48'>
-					<div class='text-center'>...and more</div>
-				</li>
-			</ul>
+		<div class='min-h-screen px-8 flex flex-col items-center gap-8 mt-10 sm:px-16 lg:px-20 xl:px-28'>
+      <h2 id='stack' class='section-title text-[#FFC60A] text-center font-bold'>{t('sections.stack')}</h2>
+			<StackTable />
 		</div>
-		<div class="h-screen flex flex-col gap-10 md:gap-20 px-8 sm:px-16 lg:px-20 xl:px-28">
+		<div class="h-screen flex flex-col gap-10 px-8 mt-10 sm:px-16 md:gap-20 lg:px-20 xl:px-28">
 			<h2 class='section-title text-[#FFC60A] text-center font-bold mt-10'>{t('sections.clients-reviews')}</h2>
 			<Reviews client:load reviews={reviews} />
 		</div>
-		<div class='min-h-screen px-8 flex flex-col items-center gap-4 sm:px-16 lg:px-20 xl:px-28'>
+		<div class='min-h-screen px-8 flex flex-col items-center gap-4 mt-10 sm:px-16 lg:px-20 xl:px-28'>
 			<h2 id='projects' class='section-title text-[#FFC60A] text-center font-bold mt-10'>{t('sections.projects')}</h2>
 			<ProjectCards lang={i18next.language} />
 		</div>
-		<div class='min-h-screen px-8 flex flex-col items-center gap-4 pb-10 sm:px-16 lg:px-20 lg:pb-16 xl:px-28'>
+		<div class='min-h-screen px-8 flex flex-col items-center gap-4 pb-10 mt-10 sm:px-16 lg:px-20 lg:pb-16 xl:px-28'>
 			<h2 id='contact' class='section-title text-[#FFC60A] text-center font-bold mt-10'>{t('sections.contact')}</h2>
 			  <h3 class='mt-10 text-zinc-100 text-2xl md:text-3xl italic'>{t('contact.social.title')}:</h3>
 				<ul class='mt-4 flex flex-wrap gap-4 justify-center md:gap-x-8'>

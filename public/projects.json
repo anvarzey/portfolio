@@ -9,26 +9,26 @@
     "image": "https://res.cloudinary.com/dfyxdowwb/image/upload/c_scale,w_1220/v1687118146/portfolio/ronda-matera_okztdu.webp",
     "url": "https://rondamatera.vercel.app/",
     "repo": "https://github.com/anvarzey/ronda-matera",
-    "skills": [
+    "stack": [
       {
         "name": "React",
-        "icon": "/icons/react.svg"
+        "icon": "https://res.cloudinary.com/dfyxdowwb/image/upload/v1693389197/portfolio/logos/react_adided.svg"
       },
       {
         "name": "Next js",
-        "icon": "/icons/nextjs.svg"
+        "icon": "https://res.cloudinary.com/dfyxdowwb/image/upload/v1693389197/portfolio/logos/nextjs_jqxnjl.svg"
       },
       {
         "name": "Typescript",
-        "icon": "/icons/typescript.svg"
+        "icon": "https://res.cloudinary.com/dfyxdowwb/image/upload/v1693389199/portfolio/logos/typescript_fdfixf.svg"
       },
       {
         "name": "Node js",
-        "icon": "/icons/node.svg"
+        "icon": "https://res.cloudinary.com/dfyxdowwb/image/upload/v1693389197/portfolio/logos/node_lmdcuv.svg"
       },
       {
         "name": "Mongoose",
-        "icon": "/icons/mongoose.svg"
+        "icon": "https://res.cloudinary.com/dfyxdowwb/image/upload/v1693389197/portfolio/logos/mongoose_bpzeao.svg"
       }
     ]
   },
@@ -42,30 +42,30 @@
     "image": "https://res.cloudinary.com/dfyxdowwb/image/upload/c_scale,q_auto:best,w_1220/v1691963569/portfolio/brewery_axcngt.webp",
     "url": "https://restaurant-booking-tau.vercel.app/",
     "repo": "https://github.com/anvarzey/restaurant-booking",
-    "skills": [
+    "stack": [
       {
         "name": "Next js",
-        "icon": "/icons/nextjs.svg"
+        "icon": "https://res.cloudinary.com/dfyxdowwb/image/upload/v1693389197/portfolio/logos/nextjs_jqxnjl.svg"
       },
       {
         "name": "Typescript",
-        "icon": "/icons/typescript.svg"
+        "icon": "https://res.cloudinary.com/dfyxdowwb/image/upload/v1693389199/portfolio/logos/typescript_fdfixf.svg"
       },
       {
         "name": "Prisma",
-        "icon": "/icons/prisma.svg"
+        "icon": "https://res.cloudinary.com/dfyxdowwb/image/upload/v1693389197/portfolio/logos/prisma_os4sjw.svg"
       },
       {
         "name": "Mongo DB",
-        "icon": "/icons/mongoDB.svg"
+        "icon": "https://res.cloudinary.com/dfyxdowwb/image/upload/v1693389196/portfolio/logos/mongoDB_z612mf.svg"
       },
       {
         "name": "Zustand",
-        "icon": "/icons/zustand.ico"
+        "icon": "https://res.cloudinary.com/dfyxdowwb/image/upload/v1693389199/portfolio/logos/zustand_i9rvqq.png"
       },
       {
         "name": "Tailwind",
-        "icon": "/icons/tailwind.svg"
+        "icon": "https://res.cloudinary.com/dfyxdowwb/image/upload/v1693389199/portfolio/logos/tailwind_kwnz0a.svg"
       }
     ]
   },
@@ -79,26 +79,26 @@
     "image": "https://res.cloudinary.com/dfyxdowwb/image/upload/c_scale,w_1220/v1687118142/portfolio/fasechat_jmjfsq.webp",
     "url": "https://fasechat.vercel.app/",
     "repo": "https://github.com/anvarzey/fasechat",
-    "skills": [
+    "stack": [
       {
         "name": "React",
-        "icon": "/icons/react.svg"
+        "icon": "https://res.cloudinary.com/dfyxdowwb/image/upload/v1693389197/portfolio/logos/react_adided.svg"
       },
       {
         "name": "Firebase",
-        "icon": "/icons/firebase.svg"
+        "icon": "https://res.cloudinary.com/dfyxdowwb/image/upload/v1693389196/portfolio/logos/firebase_acdxhn.svg"
       },
       {
         "name": "Next js",
-        "icon": "/icons/nextjs.svg"
+        "icon": "https://res.cloudinary.com/dfyxdowwb/image/upload/v1693389197/portfolio/logos/nextjs_jqxnjl.svg"
       },
       {
         "name": "Javascript",
-        "icon": "/icons/javascript.svg"
+        "icon": "https://res.cloudinary.com/dfyxdowwb/image/upload/v1693389196/portfolio/logos/javascript_brist7.svg"
       },
       {
         "name": "Responsive Design",
-        "icon": "/icons/responsive.svg"
+        "icon": "https://res.cloudinary.com/dfyxdowwb/image/upload/v1693389197/portfolio/logos/responsive_jl9vkh.svg"
       }
     ]
   },
@@ -112,26 +112,26 @@
     "image": "https://res.cloudinary.com/dfyxdowwb/image/upload/c_scale,w_1220/v1687117884/portfolio/pipi-dashboard_tlx1h0.webp",
     "url": "https://pipi-dashboard.vercel.app/",
     "repo": "https://github.com/anvarzey/pipi-dashboard",
-    "skills": [
+    "stack": [
       {
         "name": "Next js",
-        "icon": "/icons/nextjs.svg"
+        "icon": "https://res.cloudinary.com/dfyxdowwb/image/upload/v1693389197/portfolio/logos/nextjs_jqxnjl.svg"
       },
       {
         "name": "Material UI",
-        "icon": "/icons/material-ui.svg"
+        "icon": "https://res.cloudinary.com/dfyxdowwb/image/upload/v1693389195/portfolio/logos/material-ui_qdiwxl.svg"
       },
       {
         "name": "Mongoose",
-        "icon": "/icons/mongoose.svg"
+        "icon": "https://res.cloudinary.com/dfyxdowwb/image/upload/v1693389197/portfolio/logos/mongoose_bpzeao.svg"
       },
       {
         "name": "Typescript",
-        "icon": "/icons/typescript.svg"
+        "icon": "https://res.cloudinary.com/dfyxdowwb/image/upload/v1693389199/portfolio/logos/typescript_fdfixf.svg"
       },
       {
         "name": "Mongo DB",
-        "icon": "/icons/mongoDB.svg"
+        "icon": "https://res.cloudinary.com/dfyxdowwb/image/upload/v1693389196/portfolio/logos/mongoDB_z612mf.svg"
       }
     ]
   },
@@ -145,26 +145,26 @@
     "image": "https://res.cloudinary.com/dfyxdowwb/image/upload/c_scale,w_1220/v1687118143/portfolio/shortly_q8dg9p.webp",
     "url": "https://shortyurlch.netlify.app/",
     "repo": "https://github.com/anvarzey/url-shortening",
-    "skills": [
+    "stack": [
       {
         "name": "React",
-        "icon": "/icons/react.svg"
+        "icon": "https://res.cloudinary.com/dfyxdowwb/image/upload/v1693389197/portfolio/logos/react_adided.svg"
       },
       {
         "name": "External API",
-        "icon": "/icons/api.svg"
+        "icon": "https://res.cloudinary.com/dfyxdowwb/image/upload/v1693389195/portfolio/logos/api_nqjc0c.svg"
       },
       {
         "name": "Tailwind",
-        "icon": "/icons/tailwind.svg"
+        "icon": "https://res.cloudinary.com/dfyxdowwb/image/upload/v1693389199/portfolio/logos/tailwind_kwnz0a.svg"
       },
       {
         "name": "Javascript",
-        "icon": "/icons/javascript.svg"
+        "icon": "https://res.cloudinary.com/dfyxdowwb/image/upload/v1693389196/portfolio/logos/javascript_brist7.svg"
       },
       {
         "name": "Responsive Design",
-        "icon": "/icons/responsive.svg"
+        "icon": "https://res.cloudinary.com/dfyxdowwb/image/upload/v1693389197/portfolio/logos/responsive_jl9vkh.svg"
       }
     ]
   }

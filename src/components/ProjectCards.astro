@@ -7,7 +7,7 @@ export interface Props {
 const { lang } = Astro.props
 let imageClasses = 'overflow-hidden rounded-lg shadow-md image-container flex justify-center items-center w-full'
 let descriptionClasses = 'text-zinc-200 text-center sm:text-xl lg:text-2xl lg:w-full md:text-left '
-let skillsClasses = 'flex flex-wrap gap-2 md:gap-x-4 justify-center lg:justify-start '
+let stackClasses = 'flex flex-wrap gap-2 md:gap-x-4 justify-center lg:justify-start '
 let btnsClasses = 'flex gap-4 justify-center lg:justify-start '
 
 ---
@@ -52,15 +52,15 @@ let btnsClasses = 'flex gap-4 justify-center lg:justify-start '
           <p class={descriptionClasses}>
             {lang === 'en' ? project.description.en : project.description.es}
           </p>
-          <ul class={skillsClasses}>
+          <ul class={stackClasses}>
             {
-              project.skills && project.skills.map((skill) => {
+              project.stack && project.stack.map((tech) => {
                   return (
                     <li class='flex gap-2 items-center bg-c-blue/80 w-fit h-fit py-2 px-4'>
                       <span class='h-4 w-4 lg:h-6 lg:w-6'>
-                        <img src={skill.icon} alt={`${skill.name} icon`} class="h-full w-auto" />
+                        <img src={tech.icon} alt={`${tech.name} icon`} class="h-full w-auto" />
                       </span>
-                      <span class='text-sm text-zinc-200'>{skill.name}</span>
+                      <span class='text-sm text-zinc-200'>{tech.name}</span>
                     </li>
                   )
                 })

@@ -1,0 +1,106 @@
+{
+  "backend": [
+    {
+      "id": 1,
+      "name": "Node js",
+      "image": "https://res.cloudinary.com/dfyxdowwb/image/upload/v1693389197/portfolio/logos/node_lmdcuv.svg",
+      "color": "539E43",
+      "bg": false
+    },
+    {
+      "id": 109,
+      "name": "Express",
+      "image": "https://res.cloudinary.com/dfyxdowwb/image/upload/v1693389528/portfolio/logos/express_djpvbe.svg",
+      "color": "539E43",
+      "bg": true
+    },
+    {
+      "id": 2,
+      "name": "Mongo DB",
+      "image": "https://res.cloudinary.com/dfyxdowwb/image/upload/v1693389196/portfolio/logos/mongoDB_z612mf.svg",
+      "color": "CF649A",
+      "bg": false
+    },
+    {
+      "id": 29,
+      "name": "MySQL",
+      "image": "https://res.cloudinary.com/dfyxdowwb/image/upload/v1693389807/portfolio/logos/mysql_kxfysz.svg",
+      "color": "CF649A",
+      "bg": true
+    },
+    {
+      "id": 2,
+      "name": "Prisma",
+      "image": "https://res.cloudinary.com/dfyxdowwb/image/upload/v1693389197/portfolio/logos/prisma_os4sjw.svg",
+      "color": "CF649A",
+      "bg": false
+    },
+    {
+      "id": 2,
+      "name": "Mongoose",
+      "image": "https://res.cloudinary.com/dfyxdowwb/image/upload/v1693389197/portfolio/logos/mongoose_bpzeao.svg",
+      "color": "CF649A",
+      "bg": false
+    }
+  ],
+  "frontend": [
+    {
+      "id": 3,
+      "name": "React",
+      "image": "https://res.cloudinary.com/dfyxdowwb/image/upload/v1693389197/portfolio/logos/react_adided.svg",
+      "color": "00D8FF",
+      "bg": false
+    },
+    {
+      "id": 4,
+      "name": "Next js",
+      "image": "https://res.cloudinary.com/dfyxdowwb/image/upload/v1693389197/portfolio/logos/nextjs_jqxnjl.svg",
+      "color": "000000",
+      "bg": false
+    },
+    {
+      "id": 5,
+      "name": "Redux",
+      "image": "https://res.cloudinary.com/dfyxdowwb/image/upload/v1693389528/portfolio/logos/redux_adflgp.svg",
+      "color": "1F62AE",
+      "bg": false
+    },
+    {
+      "id": 5,
+      "name": "CSS",
+      "image": "https://res.cloudinary.com/dfyxdowwb/image/upload/v1693389196/portfolio/logos/css_d4f3bg.svg",
+      "color": "1F62AE",
+      "bg": false
+    },
+    {
+      "id": 16,
+      "name": "Tailwind",
+      "image": "https://res.cloudinary.com/dfyxdowwb/image/upload/v1693389199/portfolio/logos/tailwind_kwnz0a.svg",
+      "color": "CF649A",
+      "bg": false
+    },
+    {
+      "id": 6,
+      "name": "Sass",
+      "image": "https://res.cloudinary.com/dfyxdowwb/image/upload/v1693389198/portfolio/logos/sass_zxwuel.svg",
+      "color": "CF649A",
+      "bg": false
+    }
+  ],
+  "languages": [
+    {
+      "id": 7,
+      "name": "Javascript",
+      "image": "https://res.cloudinary.com/dfyxdowwb/image/upload/v1693389196/portfolio/logos/javascript_brist7.svg",
+      "color": "F7DF1E",
+      "bg": false
+    },
+    {
+      "id": 8,
+      "name": "Typescript",
+      "image": "https://res.cloudinary.com/dfyxdowwb/image/upload/v1693389199/portfolio/logos/typescript_fdfixf.svg",
+      "color": "007ACC",
+      "bg": false
+    }
+  ]
+}

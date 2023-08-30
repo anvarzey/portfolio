@@ -5,25 +5,32 @@
   "sections": {
     "home": "Home",
     "about": "About",
-    "skills": "Skills",
-    "projects": "Personal Projects",
+    "stack": "Stack",
+    "projects": "Projects",
     "clients-reviews": "Clients' Reviews",
     "contact": "Contact"
   },
   "home": {
     "greeting": "Hello there 👋",
     "presentation": "I am ",
-    "phrase": "I love building beautiful applications that generate value for the people.",
+    "phrase": "building beautiful applications that generate value for the people.",
     "aria-label-github": "Go to my Github profile",
     "aria-label-linkedin": "Go to my Linkedin profile",
     "aria-label-twitter": "Go to my X profile (former Twitter)"
   },
   "about": {
-    "paragraph-1": "My first steps in coding were in high school, solving some exercises. Although I was interested in the subject and I was curious to learn more, I set it aside because I was mainly focused on playing football (soccer) and learning about sports.",
-    "paragraph-2": "In 2022 I returned to programming to find what I couldn't have seen before. After some searches and investigations, web development got my attention and I decided to go deeper.",
-    "paragraph-3": "I learned through different resources from web and building projects. Now, I am exploring and improving my skills to develop a better software and give a better experience to the user."
+    "paragraph-1": "I am a versatile and enthusiastic full-stack developer, who's all about building exceptional digital experiences.",
+    "paragraph-2": "My focus when building an application is that it must be user-centric, so that the frontend might give an outstanding experience to the user and might accurately reflect the message of the project. Moreover, the backend might be robust with its proper security and effectiveness.",
+    "paragraph-3": "Every time I take on a project, I immerse myself into it to understand its context and provide the solution that best fits its needs."
   },
   "lang": "en",
+  "stack": {
+    "titles": {
+      "backend": "Backend",
+      "frontend": "Frontend",
+      "languages": "Programming Languages"
+    }
+  },
   "clients-reviews": {
     "0": {
       "review": "I recently had the pleasure of working with this Julian From the initial consultation to the delivery of the project, I was more than satisfied with the professionalism and quality of the work produced. He was able to quickly grasp my concept and make the necessary adjustments to ensure that my vision was clearly translated in the end product. Even when I had additional requests after the completion of the project, Julian was extremely accommodating, making sure that all my expectations were fully met. Highly recommended! 5 stars!",

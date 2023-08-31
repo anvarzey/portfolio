@@ -1,6 +1,7 @@
 import emailjs from '@emailjs/browser'
 import '../styles/Form.css'
-import { FieldValues, SubmitHandler, useForm } from 'react-hook-form'
+import { useForm } from 'react-hook-form'
+import type { FieldValues, SubmitHandler } from 'react-hook-form'
 
 interface Props {
   nameTitle: string

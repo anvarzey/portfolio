@@ -27,7 +27,7 @@ export default function Reviews ({ reviews }: IProps): ReactElement {
   }, [])
   return (
     <div className='grow overflow-hidden'>
-      <div className='px-10 py-12 h-full bg-c-light-blue rounded-xl text-slate-100 flex flex-col items-center justify-around'>
+      <div className='px-4 md:px-10 py-12 h-full bg-c-light-blue rounded-xl text-slate-100 flex flex-col items-center justify-around'>
         <div className='grow w-full flex items-start gap-2'>
           <div className='h-10 w-16 text-3xl text-white'>
             <QuoteIcon />
@@ -60,7 +60,7 @@ export default function Reviews ({ reviews }: IProps): ReactElement {
             reviews.map(review => (
               <span
                 key={review.id}
-                className={`w-4 h-4 rounded-full ${current === review.id ? 'bg-c-yellow' : 'bg-c-blue'} cursor-pointer`}
+                className={`w-6 h-6 md:w-4 md:h-4 rounded-full ${current === review.id ? 'bg-c-yellow' : 'bg-c-blue'} cursor-pointer`}
                 onClick={() => handleReview(review.id)}
               />
             ))

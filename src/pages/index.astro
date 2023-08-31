@@ -7,11 +7,11 @@ import ProjectCards from "../components/ProjectCards.astro";
 import TwitterIcon from "../components/icons/TwitterIcon";
 import GitHubIcon from "../components/icons/GitHubIcon";
 import SocialButton from "../components/SocialButton";
-import { Picture } from "@astrojs/image/components";
 import LinkedinIcon from "../components/icons/LinkedinIcon";
 import Navbar from "../components/Navbar.astro";
 import Reviews from "../components/Reviews";
 import StackTable from "../components/StackTable.astro";
+import { Image } from "astro:assets";
 
 changeLanguage("en");
 
@@ -41,11 +41,16 @@ const reviews = [
 
 <Layout title='Julian Varo | Full Stack Developer'>
 	<div id='begin' class='h-screen max-w-screen overflow-hidden relative py-8 flex flex-col'>
-		<Navbar />
-		
+		<Navbar />		
 		<div class='grow flex flex-col items-center justify-around px-16 md:gap-10 md:flex-row-reverse lg:px-20 xl:px-28'>
 			<div class='h-60 mx-auto sm:h-72 md:h-96 lg:col-start-2 z-10'>
-				<img class='object-cover h-full rocket' src='/images/rocket.png' alt='Rocket'>
+				<Image 
+				  class='object-cover h-full rocket'
+				  src='/images/rocket.png'
+				  width="512"
+				  height="512"
+				  alt='Rocket' 
+				/>
 			</div>
 			<div class='text-center mb-10 z-10 md:text-start md:self-end'>
 				<div class='text-zinc-100 mb-2 flex flex-col gap-4'>
@@ -83,7 +88,12 @@ const reviews = [
       <h2 id='about' class='section-title text-[#FFC60A] text-center font-bold mt-10'>{t('sections.about')}</h2>
 			<article class='flex flex-col items-center lg:flex-row lg:gap-4 lg:justify-between'>
 				<div class='h-48 w-48 bg-gradient-to-tr from-cyan-500 to-blue-500 pt-2 rounded-xl flex flex-col items-center justify-center lg:h-full lg:w-80'>
-					<Picture src='https://res.cloudinary.com/dfyxdowwb/image/upload/c_scale,q_auto:best,w_479/v1687118147/portfolio/photo_add1zr.webp' widths={[192, 320]} sizes='(max-width: 320px)' aspectRatio='160:213' alt='Julian Varo image' />
+					<Image 
+					  src='https://res.cloudinary.com/dfyxdowwb/image/upload/c_scale,q_auto:best,w_479/v1687118147/portfolio/photo_add1zr.webp' 
+						width="479" 
+						height="638" 
+						alt='Julian Varo image' 
+					/>
 				</div>
 				<div class='about-text lg:w-2/4 mt-20 lg:mt-0 text-zinc-100'>
 					<p>
@@ -102,7 +112,7 @@ const reviews = [
       <h2 id='stack' class='section-title text-[#FFC60A] text-center font-bold'>{t('sections.stack')}</h2>
 			<StackTable />
 		</div>
-		<div class="h-screen flex flex-col gap-10 px-8 mt-10 sm:px-16 md:gap-20 lg:px-20 xl:px-28">
+		<div class="min-h-screen flex flex-col gap-10 px-8 mt-10 sm:px-16 md:gap-20 lg:px-20 xl:px-28">
 			<h2 class='section-title text-[#FFC60A] text-center font-bold mt-10'>{t('sections.clients-reviews')}</h2>
 			<Reviews client:load reviews={reviews} />
 		</div>
@@ -142,10 +152,10 @@ const reviews = [
 				/>
 		</div>
     <MobileNav />
-		<footer class='border-t border-c-light-blue py-4 sm:py-6'>
-			<div class='footer-text text-zinc-400 text-center'>Julian Varo | 2023</div>
-		</footer>
 	</main>
+	<footer class='border-t border-c-light-blue py-4 sm:py-6'>
+		<div class='footer-text text-zinc-400 text-center'>Julian Varo | 2023</div>
+	</footer>
 </Layout>
 
 <style>
@@ -183,7 +193,7 @@ const reviews = [
 		font-size: clamp(1rem, 3vw, 1.5rem);
 	}
 	.footer-text{
-		font-size: clamp(1rem, 5vw, 1.5rem);
+		font-size: clamp(0.75rem, 5vw, 1.5rem);
 	}
 	@media (hover: hover) {
 		.icon:hover {

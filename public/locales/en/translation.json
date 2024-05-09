@@ -6,7 +6,7 @@
     "home": "Home",
     "about": "About",
     "stack": "Stack",
-    "projects": "Projects",
+    "projects": "Personal Projects",
     "clients-reviews": "Clients' Reviews",
     "contact": "Contact"
   },
@@ -28,7 +28,8 @@
     "titles": {
       "backend": "Backend",
       "frontend": "Frontend",
-      "languages": "Programming Languages"
+      "languages": "Programming Languages",
+      "databases": "Databases"
     }
   },
   "clients-reviews": {

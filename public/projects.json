@@ -1,39 +1,6 @@
 [
   {
     "id": 1,
-    "title": "ronda matera",
-    "description": {
-      "en": "It is a web that compares the prices of yerba-mate products selled in Spain. It also has a product recommendation quiz and a step-by-step guide to prepare mate tea. (I built a scraper to get the data, which is on my github)",
-      "es": "Comparador de precios de yerba mate vendida en España. Además, tiene un recomendador de productos con un cuestionario y una guía paso a paso de como preparar un mate. (Para obtener los datos construí un web scraper, el código se encuentra en mi GitHub)"
-    },
-    "image": "https://res.cloudinary.com/dfyxdowwb/image/upload/c_scale,w_1220/v1687118146/portfolio/ronda-matera_okztdu.webp",
-    "url": "https://rondamatera.vercel.app/",
-    "repo": "https://github.com/anvarzey/ronda-matera",
-    "stack": [
-      {
-        "name": "React",
-        "icon": "https://res.cloudinary.com/dfyxdowwb/image/upload/v1693389197/portfolio/logos/react_adided.svg"
-      },
-      {
-        "name": "Next js",
-        "icon": "https://res.cloudinary.com/dfyxdowwb/image/upload/v1693389197/portfolio/logos/nextjs_jqxnjl.svg"
-      },
-      {
-        "name": "Typescript",
-        "icon": "https://res.cloudinary.com/dfyxdowwb/image/upload/v1693389199/portfolio/logos/typescript_fdfixf.svg"
-      },
-      {
-        "name": "Node js",
-        "icon": "https://res.cloudinary.com/dfyxdowwb/image/upload/v1693389197/portfolio/logos/node_lmdcuv.svg"
-      },
-      {
-        "name": "Mongoose",
-        "icon": "https://res.cloudinary.com/dfyxdowwb/image/upload/v1693389197/portfolio/logos/mongoose_bpzeao.svg"
-      }
-    ]
-  },
-  {
-    "id": 2,
     "title": "restaurant-booking",
     "description": {
       "en": "Booking system of a restaurant, with the option to order at that time and checkout.",
@@ -70,7 +37,7 @@
     ]
   },
   {
-    "id": 3,
+    "id": 2,
     "title": "fasechat",
     "description": {
       "en": "Chat room using Realtime Database, storage and Google Auth from Firebase.",
@@ -103,7 +70,7 @@
     ]
   },
   {
-    "id": 4,
+    "id": 3,
     "title": "pipi-dashboard",
     "description": {
       "en": "Dashboard of a bakery that tracks sales information, products' reviews and other relevant information.",
@@ -136,7 +103,7 @@
     ]
   },
   {
-    "id": 5,
+    "id": 4,
     "title": "shortly",
     "description": {
       "en": "Url shortener landing page. In this project, tailwind is used for styles, local storage to save the data and an external API to get the results. Challenge by frontend mentor.",

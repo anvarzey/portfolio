@@ -15,19 +15,13 @@
       "bg": true
     },
     {
-      "id": 2,
-      "name": "Mongo DB",
-      "image": "https://res.cloudinary.com/dfyxdowwb/image/upload/v1693389196/portfolio/logos/mongoDB_z612mf.svg",
-      "color": "CF649A",
-      "bg": false
-    },
-    {
-      "id": 29,
-      "name": "MySQL",
-      "image": "https://res.cloudinary.com/dfyxdowwb/image/upload/v1693389807/portfolio/logos/mysql_kxfysz.svg",
-      "color": "CF649A",
+      "id": 189,
+      "name": "Laravel",
+      "image": "https://res.cloudinary.com/dfyxdowwb/image/upload/v1693389528/portfolio/logos/laravel_yzaufq.svg",
+      "color": "539E43",
       "bg": true
     },
+    
     {
       "id": 2,
       "name": "Prisma",
@@ -41,6 +35,22 @@
       "image": "https://res.cloudinary.com/dfyxdowwb/image/upload/v1693389197/portfolio/logos/mongoose_bpzeao.svg",
       "color": "CF649A",
       "bg": false
+    }
+  ],
+  "databases": [
+    {
+      "id": 2,
+      "name": "Mongo DB",
+      "image": "https://res.cloudinary.com/dfyxdowwb/image/upload/v1693389196/portfolio/logos/mongoDB_z612mf.svg",
+      "color": "CF649A",
+      "bg": false
+    },
+    {
+      "id": 29,
+      "name": "MySQL",
+      "image": "https://res.cloudinary.com/dfyxdowwb/image/upload/v1693389807/portfolio/logos/mysql_kxfysz.svg",
+      "color": "CF649A",
+      "bg": true
     }
   ],
   "frontend": [
@@ -99,6 +109,13 @@
       "id": 8,
       "name": "Typescript",
       "image": "https://res.cloudinary.com/dfyxdowwb/image/upload/v1693389199/portfolio/logos/typescript_fdfixf.svg",
+      "color": "007ACC",
+      "bg": false
+    },
+    {
+      "id": 13,
+      "name": "PHP",
+      "image": "https://res.cloudinary.com/dfyxdowwb/image/upload/v1693389199/portfolio/logos/php_eyloyo.svg",
       "color": "007ACC",
       "bg": false
     }

@@ -83,7 +83,11 @@ export default function Form ({
               errors.message?.message !== undefined &&
               (<p className='text-red-100'>{errors.message?.message}</p>)
             }
-            <button disabled={!isValid || isLoading || isSubmitting} className='form-btn py-2 px-4 w-fit mx-auto rounded-lg bg-[#CC9C00] border border-[#FFD449] text-c-blue sm:mt-4 sm:px-8 sm:py-3 hover:bg-[#FFD449] disabled:opacity-50 disabled:hover:bg-[#CC9C00]'>{button}</button>
+            <div className="flex items-center justify-center sm:mt-4">
+              <button disabled={!isValid || isLoading || isSubmitting} className="cursor-pointer flex items-center bg-yellow-600 hover:bg-yellow-500 border border-transparent active:border-yellow-400 rounded-md text-xl duration-100 py-2 px-6 text-slate-50 font-semibold disabled:opacity-50 disabled:hover:bg-yellow-600 disabled:active:border-transparent disabled:cursor-default">
+                {button}
+              </button>
+            </div>
           </form>)
           : (<div className='flex flex-col items-center justify-center gap-6 w-full h-48 border-2 border-green-700 bg-green-100 rounded-xl text-center'>
             <div className='text-xl'>Your message has been sent successfully !</div>

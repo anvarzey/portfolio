@@ -3,7 +3,6 @@ import Layout from "../../layouts/Layout.astro";
 import Form from "../../components/Form";
 import MobileNav from "../../components/MobileNav.astro";
 import i18next, { t, changeLanguage } from "i18next";
-import ProjectCards from "../../components/ProjectCards.astro";
 import TwitterIcon from "../../components/icons/TwitterIcon";
 import GitHubIcon from "../../components/icons/GitHubIcon";
 import SocialButton from "../../components/SocialButton";
@@ -12,6 +11,7 @@ import Navbar from "../../components/Navbar.astro";
 import Reviews from "../../components/Reviews";
 import StackTable from "../../components/StackTable.astro";
 import { Image } from "astro:assets";
+import Projects from "../../components/Projects.astro";
 
 changeLanguage("es");
 
@@ -46,7 +46,7 @@ const reviews = [
 			<div class='h-60 mx-auto sm:h-72 md:h-96 lg:col-start-2 z-10'>
 				<Image 
 				  class='object-cover h-full rocket'
-				  src='/images/rocket.png'
+				  src="/images/rocket.png"
 				  width="512"
 				  height="512"
 				  alt='Rocket' 
@@ -88,7 +88,7 @@ const reviews = [
       <h2 id='about' class='section-title text-[#FFC60A] text-center font-bold mt-10'>{t('sections.about')}</h2>
 			<article class='flex flex-col items-center lg:flex-row lg:gap-4 lg:justify-between'>
 				<div class='h-48 w-48 bg-gradient-to-tr from-cyan-500 to-blue-500 pt-2 rounded-xl flex flex-col items-center justify-center lg:h-full lg:w-80'>
-					<Image 
+					<img 
 					  src='https://res.cloudinary.com/dfyxdowwb/image/upload/c_scale,q_auto:best,w_479/v1687118147/portfolio/photo_add1zr.webp' 
 						width="479" 
 						height="638" 
@@ -118,7 +118,7 @@ const reviews = [
 		</div>
 		<div class='min-h-screen px-8 flex flex-col items-center gap-4 mt-10 sm:px-16 lg:px-20 xl:px-28'>
 			<h2 id='projects' class='section-title text-[#FFC60A] text-center font-bold mt-10'>{t('sections.projects')}</h2>
-			<ProjectCards lang={i18next.language} />
+			<Projects lang={i18next.language} />
 		</div>
 		<div class='min-h-screen px-8 flex flex-col items-center gap-4 pb-10 mt-10 sm:px-16 lg:px-20 lg:pb-16 xl:px-28'>
 			<h2 id='contact' class='section-title text-[#FFC60A] text-center font-bold mt-10'>{t('sections.contact')}</h2>
@@ -146,7 +146,7 @@ const reviews = [
 					emailInvalid={t('contact.form.email-invalid')}
 				  messageTitle={t('contact.form.message')} 
 				  messagePlaceholder={t('contact.form.message-placeholder')} 
-					messageMissing={t('contact.form.email-missing')}
+					messageMissing={t('contact.form.message-missing')}
 					messageLength={t('contact.form.message-length')}
 				  button={t('contact.form.button')} 
 				/>

@@ -2,13 +2,16 @@
   "meta-tags": {
     "description": "My name is Julian Varo, I am a freelance full-stack developer. I am a passionate of UX and improving the applications' performance."
   },
+  "navbar": {
+    "reviews": "Reviews"
+  },
   "sections": {
     "home": "Home",
     "about": "About",
     "stack": "Stack",
-    "previousJobs": "Previous Jobs",
+    "jobs": "Previous Jobs",
     "projects": "Personal Projects",
-    "clients-reviews": "Clients' Reviews",
+    "reviews": "Client Reviews",
     "contact": "Contact"
   },
   "home": {
@@ -33,7 +36,7 @@
       "databases": "Databases"
     }
   },
-  "clients-reviews": {
+  "reviews": {
     "0": {
       "review": "I recently had the pleasure of working with this Julian From the initial consultation to the delivery of the project, I was more than satisfied with the professionalism and quality of the work produced. He was able to quickly grasp my concept and make the necessary adjustments to ensure that my vision was clearly translated in the end product. Even when I had additional requests after the completion of the project, Julian was extremely accommodating, making sure that all my expectations were fully met. Highly recommended! 5 stars!",
       "client": "Dominique"

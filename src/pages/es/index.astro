@@ -9,46 +9,45 @@ import SocialButton from "../../components/SocialButton";
 import LinkedinIcon from "../../components/icons/LinkedinIcon";
 import Navbar from "../../components/Navbar.astro";
 import Reviews from "../../components/Reviews";
-import StackTable from "../../components/StackTable.astro";
 import { Image } from "astro:assets";
-import Projects from "../../components/Projects.astro";
+import Jobs from "../../components/Jobs.astro";
 
 changeLanguage("es");
 
 const reviews = [
     {
         id: 0,
-        client: t("clients-reviews.0.client"),
-        review: t("clients-reviews.0.review")
+        client: t("reviews.0.client"),
+        review: t("reviews.0.review")
     },
     {
         id: 1,
-        client: t("clients-reviews.1.client"),
-        review: t("clients-reviews.1.review")
+        client: t("reviews.1.client"),
+        review: t("reviews.1.review")
     },
     {
         id: 2,
-        client: t("clients-reviews.2.client"),
-        review: t("clients-reviews.2.review")
+        client: t("reviews.2.client"),
+        review: t("reviews.2.review")
     },
     {
         id: 3,
-        client: t("clients-reviews.3.client"),
-        review: t("clients-reviews.3.review")
+        client: t("reviews.3.client"),
+        review: t("reviews.3.review")
     }
 ];
 ---
 
 <Layout title='Julian Varo | Full Stack Developer'>
-	<div id='begin' class='h-screen max-w-screen overflow-hidden relative py-8 flex flex-col'>
+	<div id='begin' class='h-screen max-w-screen relative py-8 flex flex-col'>
 		<Navbar />		
 		<div class='grow flex flex-col items-center justify-around px-16 max-w-screen-xl mx-auto md:gap-10 md:flex-row-reverse lg:px-20 xl:px-28'>
 			<div class='h-60 mx-auto sm:h-72 md:h-96 lg:col-start-2 z-10'>
 				<Image 
-				  class='object-cover h-full rocket'
-				  src="/images/rocket.png"
-				  width="512"
-				  height="512"
+				  class='object-cover h-full w-auto rocket'
+				  src='/images/rocket.png'
+				  width='512'
+				  height='512'
 				  alt='Rocket' 
 				/>
 			</div>
@@ -77,22 +76,24 @@ const reviews = [
 				</div>
 			</div>
 		</div>
-		<div class="h-screen w-screen overflow-hidden absolute top-0">
+		<div class='h-screen w-screen overflow-hidden absolute top-0'>
 			<div id='stars'></div>
 			<div id='stars2'></div>
 			<div id='stars3'></div>
 		</div>
 	</div>
 	<main class='max-w-screen-xl'>
-		<div class='min-h-screen px-8 flex flex-col items-center gap-10 sm:px-16 lg:px-20 xl:px-28'>
-      <h2 id='about' class='section-title text-[#FFC60A] text-center font-bold mt-10'>{t('sections.about')}</h2>
+		<div id='about' class='min-h-screen px-8 flex flex-col items-center gap-10 sm:px-16 lg:px-20 xl:px-28'>
+      <h2 class='section-title text-[#FFC60A] text-center font-bold mt-10'>
+				{t('sections.about')}
+			</h2>
 			<article class='flex flex-col items-center lg:flex-row lg:gap-4 lg:justify-between'>
 				<div class='h-48 w-48 bg-gradient-to-tr from-cyan-500 to-blue-500 pt-2 rounded-xl flex flex-col items-center justify-center lg:h-full lg:w-80'>
 					<img 
 					  src='https://res.cloudinary.com/dfyxdowwb/image/upload/c_scale,q_auto:best,w_479/v1687118147/portfolio/photo_add1zr.webp' 
-						width="479" 
-						height="638" 
-						alt='Julian Varo image' 
+						width='479' 
+						height='638' 
+						alt='Julian Varo'
 					/>
 				</div>
 				<div class='about-text lg:w-2/4 mt-20 lg:mt-0 text-zinc-100'>
@@ -108,20 +109,18 @@ const reviews = [
 				</div>
 			</article>
 			</div>
-		<div class='min-h-screen px-8 flex flex-col items-center gap-8 mt-10 sm:px-16 lg:px-20 xl:px-28'>
-      <h2 id='stack' class='section-title text-[#FFC60A] text-center font-bold'>{t('sections.stack')}</h2>
-			<StackTable />
+		<div id='jobs' class='min-h-[75vh] px-8 flex flex-col items-center gap-8 mt-10 sm:px-16 lg:px-20 xl:px-28'>
+      <h2 class='section-title text-[#FFC60A] text-center font-bold'>
+				{t('sections.jobs')}
+			</h2>
+			<Jobs />
 		</div>
-		<div class="min-h-screen flex flex-col gap-10 px-8 mt-10 sm:px-16 md:gap-20 lg:px-20 xl:px-28">
-			<h2 class='section-title text-[#FFC60A] text-center font-bold mt-10'>{t('sections.clients-reviews')}</h2>
+		<div id='reviews' class='min-h-screen flex flex-col gap-10 px-8 mt-10 sm:px-16 md:gap-20 lg:px-20 xl:px-28'>
+			<h2 class='section-title text-[#FFC60A] text-center font-bold mt-10'>{t('sections.reviews')}</h2>
 			<Reviews client:load reviews={reviews} />
 		</div>
-		<div class='min-h-screen px-8 flex flex-col items-center gap-4 mt-10 sm:px-16 lg:px-20 xl:px-28'>
-			<h2 id='projects' class='section-title text-[#FFC60A] text-center font-bold mt-10'>{t('sections.projects')}</h2>
-			<Projects lang={i18next.language} />
-		</div>
-		<div class='min-h-screen px-8 flex flex-col items-center gap-4 pb-10 mt-10 sm:px-16 lg:px-20 lg:pb-16 xl:px-28'>
-			<h2 id='contact' class='section-title text-[#FFC60A] text-center font-bold mt-10'>{t('sections.contact')}</h2>
+		<div id='contact' class='min-h-screen px-8 flex flex-col items-center gap-4 pb-10 mt-10 sm:px-16 lg:px-20 lg:pb-16 xl:px-28'>
+			<h2 class='section-title text-[#FFC60A] text-center font-bold mt-10'>{t('sections.contact')}</h2>
 			  <h3 class='mt-10 text-zinc-100 text-2xl md:text-3xl italic'>{t('contact.social.title')}:</h3>
 				<ul class='mt-4 flex flex-wrap gap-4 justify-center md:gap-x-8'>
 					<li>
@@ -219,7 +218,7 @@ const reviews = [
 	}
 
 	#stars {
-	content:"e";
+	content:'e';
   background: transparent;
 	width: 1px;
   height: 1px;
@@ -228,7 +227,7 @@ const reviews = [
   animation: animStar 50s linear infinite;
 }
 #stars:after {
-  content: " ";
+  content: ' ';
   position: absolute;
   top: 2000px;
   width: 1px;
@@ -247,7 +246,7 @@ const reviews = [
   animation: animStar 100s linear infinite;
 }
 #stars2:after {
-  content: " ";
+  content: ' ';
   position: absolute;
   top: 2000px;
   width: 2px;
@@ -266,7 +265,7 @@ const reviews = [
   animation: animStar 150s linear infinite;
 }
 #stars3:after {
-  content: "e ";
+  content: 'e ';
   position: absolute;
 	color: transparent;
 	width: 3px;

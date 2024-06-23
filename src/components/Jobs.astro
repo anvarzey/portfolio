@@ -1,0 +1,41 @@
+---
+
+import WListDB from './logos/WListDB'
+
+const jobs = [
+  {
+    title: 'WListDB',
+    description: 'I made a new version of the frontend with Nextjs (version 14), combining Material UI with the old design. Some features implemented: - Connection to Backend - Authentication - Light/Dark Themes (added in this version) - Multi-language (added in this version) - Server Side Rendering (added in this version)',
+    desc: 'Redoing frontend development with Nextjs, implementing connection to backend, multi-language, Server Side Rendering, etc. Creation of new design mixing Material UI design system with its previous version.',
+    logo: WListDB,
+    link: 'https://wlistdb.com/',
+    bg: 'bg-[#7750f8]'
+  }
+]
+---
+
+<ul class='flex flex-col gap-4 py-6 lg:gap-14'>
+{
+  jobs.map(job => (
+    <li>
+      <a href={job.link} class="w-full flex items-start justify-around rounded-md gap-4 px-2 py-4 transition-all ease-in-out duration-200 md:gap-6 md:p-4 hover:bg-c-light-blue" target="_blank">
+        <div class="w-full overflow-hidden image-container flex justify-center items-center md:w-2/5">
+          {/* <img src={job.image} alt="Wlistdb" class="h-auto w-full object-center rounded-lg"> */}
+          <div class={`w-10 h-10 p-1 rounded-lg shadow-md ${job.bg ?? job.bg} md:w-24 md:h-24 md:p-2`}>
+            {<job.logo />}
+          </div>
+        </div>
+        <div class="">
+          <h4 class="text-[#FFD449] text-lg font-bold mb-2 md:text-2xl">
+            {job.title}
+          </h4>
+          <p class="font-semibold text-sm mb-3 text-slate-100 md:mb-0 md:text-lg">
+            {job.desc}
+          </p>
+        </div>
+      </a>
+    </li>
+  ))
+}
+
+</ul>

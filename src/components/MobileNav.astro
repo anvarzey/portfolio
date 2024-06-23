@@ -1,25 +1,52 @@
 --- 
 import { t } from 'i18next'
 
+const navItems = [
+  {
+    link: '#begin',
+    text: t('sections.home')
+  },
+  {
+    link: '#about',
+    text: t('sections.about')
+  },
+  {
+    link: '#jobs',
+    text: t('sections.jobs')
+  },
+  {
+    link: '#reviews',
+    text: t('navbar.reviews')
+  },
+  // {
+  //   link: '#stack',
+  //   text: t('sections.stack')
+  // },
+  // {
+  //   link: '#projects',
+  //   text: t('sections.projects')
+  // },
+  {
+    link: '#contact',
+    text: t('sections.contact')
+  }
+]
+
 ---
 <div class='fixed right-10 bottom-16 flex flex-col-reverse md:hidden z-20'>
   <input type='checkbox' id='btn' class='hidden peer' />
   <label for='btn' class='peer-checked:rounded-t-none self-end h-10 w-10 rounded-full bg-zinc-100 flex items-center justify-center text-xl'>🚀</label>
-  <ul class='rounded-t-lg rounded-bl-lg bg-zinc-100 hidden flex-col gap-4 text-lg text-zinc-700 py-4 -z-10 peer-checked:flex peer-checked:z-auto '>
-    <li>
-      <a href='#begin' class='text-xl block w-full py-1 px-10 active:text-c-yellow'>{t('sections.home')}</a>
-    </li>
-    <li>
-      <a href='#about' class='text-xl block w-full py-1 px-10 active:text-c-yellow'>{t('sections.about')}</a>
-    </li>
-    <li>
-      <a href='#stack' class='text-xl block w-full py-1 px-10 active:text-c-yellow'>{t('sections.stack')}</a>
-    </li>
-    <li>
-      <a href='#projects' class='text-xl block w-full py-1 px-10 active:text-c-yellow'>{t('sections.projects')}</a>
-    </li>
-    <li>
-      <a href='#contact' class='text-xl block w-full py-1 px-10 active:text-c-yellow'>{t('sections.contact')}</a>
-    </li>
+  <ul class='rounded-t-lg rounded-bl-lg bg-zinc-100 hidden flex-col gap-4 text-lg text-zinc-700 -z-10 peer-checked:flex peer-checked:z-auto '>
+    {
+      navItems.map((navItem, i) => (
+        <li>
+          <a 
+            href={navItem.link} 
+            class={`text-xl block w-full py-3 px-10 active:bg-yellow-100 active:text-c-yellow ${i === 0 ? 'pt-5 rounded-t-lg' : i === navItems.length - 1 && 'pb-5 rounded-bl-lg'}`}>
+            {navItem.text}
+          </a>
+        </li>
+      ))
+    }
   </ul>
 </div>

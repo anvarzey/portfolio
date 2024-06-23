@@ -2,12 +2,16 @@
   "meta-tags": {
     "description": "Mi nombre es Julian Varo, soy desarrollador full-stack freelance. Entusiasta de brindar una gran experiencia de usuario y mejorar el rendimiento de aplicaciones."
   },
+  "navbar": {
+    "reviews": "Reseñas"
+  },
   "sections": {
     "home": "Inicio",
     "about": "Sobre mí",
     "stack": "Stack",
+    "jobs": "Trabajos Recientes",
     "projects": "Proyectos",
-    "clients-reviews": "Opiniones de Clientes",
+    "reviews": "Opinión de Clientes",
     "contact": "Contáctame"
   },
   "home": {
@@ -32,7 +36,7 @@
       "databases": "Bases de Datos"
     }
   },
-  "clients-reviews": {
+  "reviews": {
     "0": {
       "review": "He tenido recientemente el placer de trabajar con Julian, desde la consulta inicial hasta el día de entrega del proyecto he estado muy satisfecho con el profesionalismo y la calidad del trabajo producido. Fue capaz de entender mis requerimientos y hacer los ajustes necesarios para asegurar que mi visión se reflejaba en el producto final. Incluso cuando hice peticiones adicionales luego de concluido el proyecto, Julian se acomodó, asegurándose que mis expectativas fueran completamente logradas. ¡Muy recomendable! ¡5 estrellas!",
       "client": "Dominique"

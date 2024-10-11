@@ -3,15 +3,15 @@
     "description": "My name is Julian Varo, I am a freelance full-stack developer. I am a passionate of UX and improving the applications' performance."
   },
   "navbar": {
-    "reviews": "Reviews"
+    "reviews": "Reviews",
+    "jobs": "Jobs"
   },
   "sections": {
     "home": "Home",
     "about": "About",
     "stack": "Stack",
-    "jobs": "Previous Jobs",
-    "projects": "Personal Projects",
-    "reviews": "Client Reviews",
+    "jobs": "Some of my Previous Jobs",
+    "reviews": "Clients' Reviews",
     "contact": "Contact"
   },
   "home": {
@@ -50,8 +50,8 @@
       "client": "Alejandro"
     },
     "3": {
-      "review": "Great professional. Great work",
-      "client": "Andro"
+      "review": "Impressive work, it has exceeded my expectations. We have collaborated together in order to bring out a better product, he has been informed about the state of the last libraries and their bugs and he has been participative and even suggested improvements in the product. I will surely collaborate with him again if I have another project.",
+      "client": "Asier"
     }
   },
   "contact": {

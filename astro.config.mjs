@@ -9,20 +9,24 @@ import vercel from "@astrojs/vercel/static";
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind(), react(), astroI18next()],
-  output: "static",
-  adapter: vercel({
-    // analytics: true
-    webAnalytics: {
-      enabled: true,
-    }
-  }),
+  // i18n: {
+  //   defaultLocale: 'en',
+  //   locales: ['es', 'en'],
+  // },
+  // output: "static",
+  // adapter: vercel({
+  //   // analytics: true
+  //   webAnalytics: {
+  //     enabled: true,
+  //   }
+  // }),
   image: {
-    domains: ["res.cloudinary.com"],
+    domains: ['res.cloudinary.com']
+    // service: sharpImageService()
     // service: {
     //   entrypoint: 'astro/assets/services/sharp',
-    //   config: {
-    //     limitInputPixels: false,
-    //  },
     // },
+
+
   }
 });

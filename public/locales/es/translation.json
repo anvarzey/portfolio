@@ -3,14 +3,14 @@
     "description": "Mi nombre es Julian Varo, soy desarrollador full-stack freelance. Entusiasta de brindar una gran experiencia de usuario y mejorar el rendimiento de aplicaciones."
   },
   "navbar": {
-    "reviews": "Reseñas"
+    "reviews": "Reseñas",
+    "jobs": "Trabajos"
   },
   "sections": {
     "home": "Inicio",
     "about": "Sobre mí",
     "stack": "Stack",
-    "jobs": "Trabajos Recientes",
-    "projects": "Proyectos",
+    "jobs": "Algunos de mis Trabajos Previos",
     "reviews": "Opinión de Clientes",
     "contact": "Contáctame"
   },
@@ -46,12 +46,12 @@
       "client": "Valantis"
     },
     "2": {
-      "review": "Una excelente experienza. El vendedor es muy experto y tiene excelente comunicacion. Muy profesional y disponible. Voy a seguir trabajando con el. Lo recomiendo ampliamente a todos",
+      "review": "Una excelente experiencia. El vendedor es muy experto y tiene excelente comunicacion. Muy profesional y disponible. Voy a seguir trabajando con el. Lo recomiendo ampliamente a todos",
       "client": "Alejandro"
     },
     "3": {
-      "review": "Gran profesional. Gran trabajo",
-      "client": "Andro"
+      "review": "Un trabajo impresionante, ha sobrepasado mis expectativas. Hemos colaborado juntos para poder sacar un mejor producto, se ha informado del estado de las últimas librerías y sus bug y ha sido participativo e incluso ha sugerido mejoras en el producto. Seguro que volveré a colaborar con el si tengo otro proyecto.",
+      "client": "Asier"
     }
   },
   "contact": {

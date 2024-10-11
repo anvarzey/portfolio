@@ -10,11 +10,11 @@ interface Colors {
 
 type Color = keyof Colors
 
-export default function LinkedinIcon ({ color }: { color: Color }) {
+export default function LinkedinIcon({ color }: { color: Color }) {
   const COLORS: Colors = {
     whiteOff: {
       outer: 'fill-zinc-500 hover:fill-zinc-50',
-      inner: 'fill-c-blue'
+      inner: 'fill-slate-900'
     },
     blue: {
       outer: 'fill-white',

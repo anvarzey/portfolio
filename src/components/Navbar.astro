@@ -1,39 +1,35 @@
 ---
 import i18next, { t, changeLanguage } from "i18next";
+// @ts-ignore
+import { localizePath } from "astro-i18next"
 
 const navItems = [
   {
-    link: '#about',
+    link: '/#about',
     text: t('sections.about')
   },
   {
-    link: '#jobs',
-    text: t('sections.jobs')
+    link: '/#prev-jobs',
+    text: t('navbar.jobs')
   },
   {
-    link: '#reviews',
+    link: '/#reviews',
     text: t('navbar.reviews')
   },
-  // {
-  //   link: '#stack',
-  //   text: 'Previous Jobs'
-  // },
-  // {
-  //   link: '#projects',
-  //   text: t('sections.projects')
-  // },
   {
-    link: '#contact',
+    link: '/#contact',
     text: t('sections.contact')
   }
 ]
+
+const { pathname } = Astro.url
 ---
 
-<header class='w-full flex items-center px-10 max-w-screen-xl mx-auto lg:px-20 xl:px-28'>
-  <div class='md:w-1/4 flex flex-col z-10'>
+<header class='w-full flex items-center px-8 max-w-screen-xl mx-auto lg:px-20 xl:px-28'>
+  <a href={localizePath('/')} class='md:w-1/4 flex flex-col z-10'>
     <h1 class='name text-2xl sm:text-3xl lg:text-4xl'>Julian Varo</h1>
     <div class='text-zinc-400 text-sm sm:text-base lg:text-lg  pl-6 sm:pl-8 lg:pl-12'>@anvarzey</div>
-  </div>
+  </a>
   <nav
     class='grow bg-[#241564] bg-transparent'
   >
@@ -45,7 +41,7 @@ const navItems = [
           class='hidden md:flex items-center w-1/5 justify-center z-10'
         >
           <a
-            href={navItem.link}
+            href={localizePath(navItem.link)}
             class='text-md menu-item border-b-2 border-transparent hover:text-white hover:border-[#FBC505] py-2 transition duration-100 ease-in'
           >
             {navItem.text}
@@ -59,16 +55,16 @@ const navItems = [
               ? (
                 <>
                   <span class='py-1 px-2 bg-zinc-200 opacity-60 rounded-l-lg'>🇺🇸 EN</span>
-                  <a href='/es' class='py-1 px-2 bg-zinc-200 border-l border-zinc-500 rounded-r-lg'>🇪🇸 ES</a>
+                  <a href={localizePath(pathname, 'es')} class='py-1 px-2 bg-zinc-200 border-l border-zinc-500 rounded-r-lg'>🇪🇸 ES</a>
                 </>
                 )
               : (
                 <>
-                  <a href='/' class='py-1 px-2 bg-zinc-200 border-r border-zinc-500 rounded-l-lg'>🇺🇸 EN</a>
+                  <a href={localizePath(pathname, 'en')} class='py-1 px-2 bg-zinc-200 border-r border-zinc-500 rounded-l-lg'>🇺🇸 EN</a>
                   <span class='py-1 px-2 bg-zinc-200 opacity-60 rounded-r-lg'>🇪🇸 ES</span>
                 </>
               )
-        }
+          }
         </div>
       </li>
     </ul>

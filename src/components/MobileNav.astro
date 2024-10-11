@@ -1,33 +1,27 @@
 --- 
 import { t } from 'i18next'
+// @ts-ignore
+import { localizePath } from "astro-i18next"
 
 const navItems = [
   {
-    link: '#begin',
+    link: '/#begin',
     text: t('sections.home')
   },
   {
-    link: '#about',
+    link: '/#about',
     text: t('sections.about')
   },
   {
-    link: '#jobs',
-    text: t('sections.jobs')
+    link: '/#prev-jobs',
+    text: t('navbar.jobs')
   },
   {
-    link: '#reviews',
+    link: '/#reviews',
     text: t('navbar.reviews')
   },
-  // {
-  //   link: '#stack',
-  //   text: t('sections.stack')
-  // },
-  // {
-  //   link: '#projects',
-  //   text: t('sections.projects')
-  // },
   {
-    link: '#contact',
+    link: '/#contact',
     text: t('sections.contact')
   }
 ]
@@ -41,8 +35,8 @@ const navItems = [
       navItems.map((navItem, i) => (
         <li>
           <a 
-            href={navItem.link} 
-            class={`text-xl block w-full py-3 px-10 active:bg-yellow-100 active:text-c-yellow ${i === 0 ? 'pt-5 rounded-t-lg' : i === navItems.length - 1 && 'pb-5 rounded-bl-lg'}`}>
+            href={localizePath(navItem.link)}
+            class={`text-lg block w-full py-3 px-10 active:bg-yellow-100 active:text-c-yellow ${i === 0 ? 'pt-5 rounded-t-lg' : i === navItems.length - 1 && 'pb-5 rounded-bl-lg'}`}>
             {navItem.text}
           </a>
         </li>

@@ -1,0 +1,79 @@
+---
+import i18next, { changeLanguage } from "i18next";
+import Navbar from "../../../components/Navbar.astro";
+import Layout from "../../../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import WListDBFull from "../../../images/wlistdb-title.webp";
+import WListDBHero from "../../../images/wlistdb-hero.webp";
+import projects from "../../../data/projects";
+
+changeLanguage("es");
+
+export function getStaticPaths() {
+    return [
+        { params: { title: "luisa-portfolio" } },
+        { params: { title: "wlistdb" } },
+        { params: { title: "rptzen" } },
+    ];
+}
+const { title } = Astro.params;
+const project = projects.find((pr) => pr.slug === title);
+---
+
+<Layout title={`${project?.title} | Works | Julian Varo`}>
+  <main>
+    <div class='py-8 flex flex-col'>
+        <Navbar />
+      <div class="grow px-8 pt-16 max-w-screen-xl mx-auto w-full sm:px-16 lg:px-20 xl:px-28">
+        <h1 class='text-4xl text-[#FFC60A] font-bold text-center mb-6 sm:text-6xl'>
+          {project?.title}
+        </h1>
+        <div class="flex flex-col py-10 gap-10 sm:flex-row sm:items-start">
+          <div class="h-auto w-full rounded-lg overflow-hidden shadow-lg shadow-blue-900 sm:w-1/2">
+            <Image
+            src={project?.image ?? WListDBHero}
+            alt='Landing page'
+            class='h-full w-auto'
+            transition:name={`hero-${project?.id}`}
+            />
+          </div>
+          <p class="text-zinc-300 text-lg sm:text-2xl sm:w-1/2">
+            {project?.description[i18next.language as keyof typeof project.description]}
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="min-h-[75vh] px-8 flex flex-col items-center gap-8 mt-10 sm:px-16 lg:px-20 xl:px-28">
+      <h2 class="section-title text-[#FFC60A] text-center font-bold">Tech Stack</h2>
+      <ul class="flex items-center flex-wrap justify-center gap-4">
+        {
+          project?.stack.map((tech, i) => (
+            <li
+                class="flex flex-col items-center p-4 rounded-lg"
+              >
+                <div class="relative mb-3 size-20 sm:size-24">
+                  <div class="size-full bg-slate-800 p-4 rounded-full overflow-hidden grid place-content-center z-30 relative sm:p-6">
+                    <Image
+                      src={tech.icon ?? ''}
+                      alt={`${tech.name} logo`}
+                      width={tech.width ?? 128}
+                      height={tech.height ?? 128}
+                      class="h-full w-auto object-contain"
+                    />
+                  </div>
+                    <div class="absolute inset-0 bg-blue-500 rounded-full filter blur-md opacity-10 animate-pulse z-10" />
+                </div>
+                <h3 class="text-base font-semibold text-white text-center sm:text-lg">{tech.name}</h3>
+              </li>
+          ))
+        }
+      </ul>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .section-title {
+    font-size: clamp(1.75rem, 7vw, 3.25rem);
+	}
+</style>

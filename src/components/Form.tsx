@@ -18,7 +18,7 @@ interface Props {
   button: string
 }
 
-export default function Form ({
+export default function Form({
   nameTitle,
   namePlaceholder,
   nameMissing,
@@ -64,27 +64,27 @@ export default function Form ({
     <div className='flex items-center justify-center w-full lg:w-3/4  mt-4'>
       {
         !isSubmitSuccessful
-          ? (<form onSubmit={handleSubmit(onSubmit)} className='p-4 shadow-lg bg-c-light-blue rounded-lg flex flex-col gap-2 w-full sm:p-8'>
+          ? (<form onSubmit={handleSubmit(onSubmit)} className='p-4 shadow-lg bg-slate-800 rounded-lg flex flex-col gap-2 w-full sm:p-8'>
             <label className='form-subtitle text-zinc-50' htmlFor='nameInput'>{nameTitle}</label>
             <input {...register('from_name', { required: nameMissing })} className='rounded-md text-zinc-900 bg-neutral-200 sm:px-4 p-2 sm:text-xl md:text-2xl outline-none' type='text' id='nameInput' placeholder={namePlaceholder} />
             {
               errors.from_name?.message !== undefined &&
-              (<p className='text-red-100'>{errors.from_name?.message}</p>)
+              (<p className='text-red-400'>{errors.from_name?.message}</p>)
             }
             <label className='form-subtitle sm:mt-4 text-zinc-50' htmlFor='emailInput'>{emailTitle}</label>
             <input {...register('email', { required: emailMissing, validate: validateEmail })} className='rounded-md text-zinc-900 bg-neutral-200 sm:px-4 p-2 sm:text-xl md:text-2xl outline-none' id='emailInput' placeholder={emailPlaceholder} />
             {
               errors.email?.message !== undefined &&
-              (<p className='text-red-100'>{errors.email?.message}</p>)
+              (<p className='text-red-400'>{errors.email?.message}</p>)
             }
             <label className='form-subtitle sm:mt-4 text-zinc-50' htmlFor=''>{messageTitle}</label>
             <textarea {...register('message', { required: messageMissing, minLength: { value: 15, message: messageLength } })} className='p-2 rounded-md text-zinc-900 bg-neutral-200 resize-none sm:px-4 sm:text-xl md:text-2xl outline-none' id='' cols={30} rows={5} placeholder={messagePlaceholder} />
             {
               errors.message?.message !== undefined &&
-              (<p className='text-red-100'>{errors.message?.message}</p>)
+              (<p className='text-red-400'>{errors.message?.message}</p>)
             }
             <div className="flex items-center justify-center sm:mt-4">
-              <button disabled={!isValid || isLoading || isSubmitting} className="cursor-pointer flex items-center bg-yellow-600 border border-transparent rounded-md text-xl duration-100 py-2 px-6 text-slate-50 font-semibold hover:bg-yellow-500 active:border-yellow-400 disabled:opacity-50 disabled:hover:bg-yellow-600 disabled:active:border-transparent disabled:cursor-default">
+              <button disabled={!isValid || isLoading || isSubmitting} className="cursor-pointer flex items-center bg-[#FFD449] border border-transparent rounded-md text-xl duration-100 py-2 px-6 text-slate-800 font-semibold hover:bg-yellow-500 active:border-yellow-400 disabled:opacity-50 disabled:hover:bg-yellow-600 disabled:active:border-transparent disabled:cursor-default">
                 {button}
               </button>
             </div>

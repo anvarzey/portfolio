@@ -11,6 +11,7 @@ import Navbar from "../components/Navbar.astro";
 import Reviews from "../components/Reviews";
 import { Image } from "astro:assets";
 import Jobs from "../components/Jobs.astro";
+import ChevronIcon from "../components/icons/ChevronIcon";
 
 changeLanguage("en");
 
@@ -18,22 +19,22 @@ const reviews = [
     {
         id: 0,
         client: t("reviews.0.client"),
-        review: t("reviews.0.review")
+        content: t("reviews.0.review")
     },
     {
         id: 1,
         client: t("reviews.1.client"),
-        review: t("reviews.1.review")
+        content: t("reviews.1.review")
     },
     {
         id: 2,
         client: t("reviews.2.client"),
-        review: t("reviews.2.review")
+        content: t("reviews.2.review")
     },
     {
         id: 3,
         client: t("reviews.3.client"),
-        review: t("reviews.3.review")
+        content: t("reviews.3.review")
     }
 ];
 ---
@@ -41,7 +42,7 @@ const reviews = [
 <Layout title='Julian Varo | Full Stack Developer'>
 	<div id='begin' class='h-screen max-w-screen relative py-8 flex flex-col'>
 		<Navbar />		
-		<div class='grow flex flex-col items-center justify-around px-16 max-w-screen-xl mx-auto md:gap-10 md:flex-row-reverse lg:px-20 xl:px-28'>
+		<div class='grow flex flex-col items-center justify-around px-8 max-w-screen-xl mx-auto md:gap-10 md:flex-row-reverse lg:px-20 xl:px-28'>
 			<div class='h-60 mx-auto sm:h-72 md:h-96 lg:col-start-2 z-10'>
 				<Image 
 				  class='object-cover h-full w-auto rocket'
@@ -64,13 +65,13 @@ const reviews = [
 					</div>
 				</div>
 				<div class='flex items-center gap-8 justify-center mt-8 sm:gap-16 md:justify-start lg:mt-16 third'>
-					<a class='w-10 h-10 sm:w-10 sm:h-10 lg:w-12 lg:h-12' href='https://github.com/anvarzey' target='_blank' aria-label={t('home.aria-label-github')}>
+					<a class='w-10 h-10 sm:w-10 sm:h-10 lg:w-12 lg:h-12' href='https://github.com/anvarzey' target='_blank' rel='noreferrer noopener' aria-label={t('home.aria-label-github')}>
 						<GitHubIcon color='whiteOff' />
 					</a>
-					<a class='w-10 h-10 sm:w-10 sm:h-10 lg:w-12 lg:h-12' href='https://www.linkedin.com/in/juli%C3%A1n-varo-134759234/' target='_blank' aria-label={t('home.aria-label-linkedin')}>
+					<a class='w-10 h-10 sm:w-10 sm:h-10 lg:w-12 lg:h-12' href='https://www.linkedin.com/in/juli%C3%A1n-varo-134759234/' target='_blank' rel='noreferrer noopener' aria-label={t('home.aria-label-linkedin')}>
 						<LinkedinIcon color='whiteOff' />
 					</a>
-					<a class='w-10 h-10 sm:w-10 sm:h-10 lg:w-12 lg:h-12' href='https://twitter.com/anvarzey' target='_blank' aria-label={t('home.aria-label-twitter')}>
+					<a class='w-10 h-10 sm:w-10 sm:h-10 lg:w-12 lg:h-12' href='https://twitter.com/anvarzey' target='_blank' rel='noreferrer noopener' aria-label={t('home.aria-label-twitter')}>
 						<TwitterIcon color='whiteOff' />
 					</a>
 				</div>
@@ -81,7 +82,12 @@ const reviews = [
 			<div id='stars2'></div>
 			<div id='stars3'></div>
 		</div>
-	</div>
+		<div class='hidden absolute left-1/2 bottom-8 -translate-x-1/2 drop-shadow-lg drop-shadow-blue-50 sm:block'>
+			<a href="#about" class="border fill-slate-50 border-blue-100 rounded-full p-2 pt-3 size-10 text-center animate-bounce grid place-content-center shadow-sm shadow-blue-50">
+				<ChevronIcon />
+			</a>
+		</div>
+	</div> 
 	<main class='max-w-screen-xl'>
 		<div id='about' class='min-h-screen px-8 flex flex-col items-center gap-10 sm:px-16 lg:px-20 xl:px-28'>
       <h2 class='section-title text-[#FFC60A] text-center font-bold mt-10'>
@@ -90,7 +96,7 @@ const reviews = [
 			<article class='flex flex-col items-center lg:flex-row lg:gap-4 lg:justify-between'>
 				<div class='h-48 w-48 bg-gradient-to-tr from-cyan-500 to-blue-500 pt-2 rounded-xl flex flex-col items-center justify-center lg:h-full lg:w-80'>
 					<img 
-					  src='https://res.cloudinary.com/dfyxdowwb/image/upload/c_scale,q_auto:best,w_479/v1687118147/portfolio/photo_add1zr.webp' 
+					  src='https://res.cloudinary.com/dfyxdowwb/image/upload/c_scale,q_auto:best,w_1000/v1728083392/pixlr_s4vmqp.webp' 
 						width='479' 
 						height='638' 
 						alt='Julian Varo'
@@ -109,7 +115,7 @@ const reviews = [
 				</div>
 			</article>
 			</div>
-		<div id='jobs' class='min-h-[75vh] px-8 flex flex-col items-center gap-8 mt-10 sm:px-16 lg:px-20 xl:px-28'>
+		<div id='prev-jobs' class='min-h-[75vh] px-8 flex flex-col items-center gap-8 mt-10 sm:px-16 lg:px-20 xl:px-28'>
       <h2 class='section-title text-[#FFC60A] text-center font-bold'>
 				{t('sections.jobs')}
 			</h2>
@@ -132,6 +138,9 @@ const reviews = [
 					<li class=''>
 						<SocialButton keyword='X' />
 					</li>
+					<li class=''>
+						<SocialButton keyword='Fiverr' />
+					</li>
 				</ul>
 			  <h3 class='mt-16 text-zinc-100 text-2xl md:text-3xl italic'>{t('contact.form.title')}</h3>
         <Form 
@@ -152,9 +161,6 @@ const reviews = [
 		</div>
     <MobileNav />
 	</main>
-	<footer class='border-t border-c-light-blue py-4 sm:py-6'>
-		<div class='footer-text text-zinc-400 text-center'>Julian Varo | 2024</div>
-	</footer>
 </Layout>
 
 <style>
@@ -190,9 +196,6 @@ const reviews = [
 	}
 	.about-text {
 		font-size: clamp(1rem, 3vw, 1.5rem);
-	}
-	.footer-text{
-		font-size: clamp(0.75rem, 5vw, 1.5rem);
 	}
 	@media (hover: hover) {
 		.icon:hover {

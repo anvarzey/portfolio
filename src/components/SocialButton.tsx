@@ -49,7 +49,7 @@ export default function SocialButton({ keyword }: { keyword: KeywordProp }) {
   }
   return (
     <a className={`${containerDefaultClasses} ${options[keyword].containerClasses}`} href={options[keyword].link} target='_blank' rel='noreferrer noopener'>
-      <span className='w-8 h-8 md:w-12 md:h-12'>
+      <span className='w-8 h-8 overflow-hidden flex items-center md:w-12 md:h-12'>
         {
           keyword === 'GitHub'
             ? <GitHubIcon color='black' />

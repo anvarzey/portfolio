@@ -11,7 +11,7 @@ export default defineConfig({
   integrations: [tailwind(), react(), astroI18next()],
   output: "static",
   adapter: vercel({
-    // analytics: true
+    analytics: true,
     webAnalytics: {
       enabled: true,
     }

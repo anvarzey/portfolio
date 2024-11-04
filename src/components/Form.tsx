@@ -84,7 +84,7 @@ export default function Form({
               (<p className='text-red-400'>{errors.message?.message}</p>)
             }
             <div className="flex items-center justify-center sm:mt-4">
-              <button disabled={!isValid || isLoading || isSubmitting} className="cursor-pointer flex items-center bg-[#FFD449] border border-transparent rounded-md text-xl duration-100 py-2 px-6 text-slate-800 font-semibold hover:bg-yellow-500 active:border-yellow-400 disabled:opacity-50 disabled:hover:bg-yellow-600 disabled:active:border-transparent disabled:cursor-default">
+              <button disabled={!isValid || isLoading || isSubmitting} className="cursor-pointer flex items-center bg-yellow-500 border border-transparent rounded-md text-xl duration-100 py-2 px-6 text-slate-800 font-semibold hover:bg-[#FFD449] active:border-yellow-400 disabled:opacity-50 disabled:active:border-transparent disabled:cursor-default disabled:hover:bg-[#FFD449]">
                 {button}
               </button>
             </div>

@@ -11,7 +11,7 @@ import Navbar from "../components/Navbar.astro";
 import Reviews from "../components/Reviews";
 import { Image } from "astro:assets";
 import Jobs from "../components/Jobs.astro";
-import ChevronIcon from "../components/icons/ChevronIcon";
+import { FaChevronDown as ChevronIcon } from "react-icons/fa6";
 
 changeLanguage("en");
 
@@ -84,7 +84,7 @@ const reviews = [
 		</div>
 		<div class='hidden absolute left-1/2 bottom-8 -translate-x-1/2 drop-shadow-lg drop-shadow-blue-50 sm:block'>
 			<a href="#about" class="border fill-slate-50 border-blue-100 rounded-full p-2 pt-3 size-10 text-center animate-bounce grid place-content-center shadow-sm shadow-blue-50">
-				<ChevronIcon className="size-full" />
+				<ChevronIcon className="text-slate-100 size-5" />
 			</a>
 		</div>
 	</div> 
@@ -115,7 +115,7 @@ const reviews = [
 				</div>
 			</article>
 			</div>
-		<div id='prev-jobs' class='min-h-[75vh] px-8 flex flex-col items-center gap-8 mt-10 sm:px-16 lg:px-20 xl:px-28'>
+		<div id='last-jobs' class='min-h-[75vh] px-8 flex flex-col items-center gap-8 mt-10 sm:px-16 lg:px-20 xl:px-28'>
       <h2 class='section-title text-[#FFC60A] text-center font-bold'>
 				{t('sections.jobs')}
 			</h2>

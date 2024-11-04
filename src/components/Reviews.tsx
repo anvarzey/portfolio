@@ -1,6 +1,8 @@
 import { useState, type ReactElement, useEffect } from 'react'
-import QuoteIcon from './icons/QuoteIcon'
-import StarIcon from './icons/StarIcon'
+import {
+  FaQuoteLeft as QuoteIcon,
+  FaStar as StarIcon
+} from "react-icons/fa6"
 
 interface IReview {
   id: number

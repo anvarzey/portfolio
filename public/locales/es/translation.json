@@ -6,18 +6,21 @@
     "reviews": "Reseñas",
     "jobs": "Trabajos"
   },
+  "subpaths": {
+    "jobs": "Trabajos"
+  },
   "sections": {
     "home": "Inicio",
     "about": "Sobre mí",
     "stack": "Stack",
-    "jobs": "Algunos de mis Trabajos Previos",
+    "jobs": "Últimos Trabajos",
     "reviews": "Opinión de Clientes",
     "contact": "Contáctame"
   },
   "home": {
     "greeting": "Hola 👋",
     "presentation": "Soy ",
-    "phrase": "construyendo apps interesantes que generen valor para las personas.",
+    "phrase": "desde el concepto a la realidad, soluciones web para cada necesidad.",
     "aria-label-github": "Ir a mi perfil de Github",
     "aria-label-linkedin": "Ir a mi perfil de Linkedin",
     "aria-label-twitter": "Ir a mi perfil de X (antes Twitter)"
@@ -73,5 +76,8 @@
       "message-length": "El mensaje debe tener al menos 15 caracteres",
       "button": "Enviar"
     }
+  },
+  "jobs": {
+    "visit": "Visitar"
   }
 }

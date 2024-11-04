@@ -14,7 +14,7 @@ const projects = [
     "image": WListDBHero,
     "imageWidth": 1500,
     "imageHeight": 838,
-    "link": "",
+    "url": "https://wlistdb.com/",
     "stack": [
       {
         name: "Next.js",
@@ -47,13 +47,13 @@ const projects = [
     "title": "RPTZEN",
     "slug": "rptzen",
     "description": {
-      "en": "Application developed from scratch implementing a web template acquired by the client. It has a role based system, internationalization, users management and more.",
-      "es": "Aplicación desarrollada desde 0 usando una plantilla adquirida por el cliente. Tiene un sistema de roles y permisos, función multi-idioma, manejo de usuarios y más."
+      "en": "SaaS application which development was focused on the business logic and other key features to launch the MVP. The frontend was developed based on a template acquired by the client.",
+      "es": "Aplicación SaaS en la que el desarrollo estuvo centrado en la lógica de negocio y demás funcionalidades clave para el lanzamiento de un PMV (o MVP). En el front se ha utilizado una plantilla adquirida por el cliente y se fue iterando sobre la misma."
     },
     "image": RPTZENHero,
     "imageWidth": 1500,
     "imageHeight": 848,
-    "link": "",
+    "url": "https://rptzen.com/",
     "stack": [
       {
         name: "Laravel",
@@ -92,13 +92,13 @@ const projects = [
     "title": "Luisa Portfolio",
     "slug": "luisa-portfolio",
     "description": {
-      "en": "Design of the UI according to the client's vision and requisites, with mobile-first focus. Web Development was made implementing responsive design. Also an admin panel was integrated so that the client can customize the content.",
-      "es": "Diseño de la UI (interfaz de usuario) acorde a la visión de la clienta y sus requisitos, enfocado al mobile-first. El desarrollo web fue realizado implementando un diseño responsivo. Además fue implementado un panel de administrador, de esta manera la clienta podrá editar el contenido."
+      "en": "Design of the UI according to the client's vision and requisites, with mobile-first focus. Web Development was made implementing responsive design. It was also built an admin panel, so that the client can customize the content.",
+      "es": "Diseño de la UI (interfaz de usuario) acorde a la visión de la clienta y sus requisitos, enfocado al mobile-first. El desarrollo web fue realizado implementando un diseño responsivo. Además fue construído un panel de administrador para que la clienta pueda editar el contenido."
     },
     "image": LuisaPortfolioHero,
     "imageWidth": 1500,
     "imageHeight": 848,
-    "link": "",
+    "url": null,
     "stack": [
       {
         name: "PHP",

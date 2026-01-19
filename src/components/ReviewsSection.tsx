@@ -78,7 +78,7 @@ export default function ReviewsSection({ locale }: Props) {
 				<div className="relative">
 					<div className="overflow-hidden">
 						<div
-							className="flex transition-transform duration-500 ease-out"
+							className="flex items-center transition-transform duration-500 ease-out"
 							style={{ transform: `translateX(-${currentIndex * 100}%)` }}
 						>
 							{reviews.map((review, index) => (

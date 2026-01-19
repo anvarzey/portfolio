@@ -208,27 +208,9 @@ export default function HeroSection({ locale }: Props) {
 				<canvas ref={canvasRef} className="w-full h-full" />
 			</div>
 
-			<div className="relative z-10 max-w-7xl mx-auto flex flex-col-reverse lg:grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-				<div className="animate-fade-in">
-					<h1 className="text-4xl font-atkinson font-bold leading-tight text-balance z-50 relative sm:text-5xl lg:text-6xl">
-						<span>{t('hero.greeting')}</span> <span className="text-accent-blue">Julian</span>.
-					</h1>
+			<div className="relative z-10 max-w-7xl mx-auto flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
 
-					<p className="mt-6 text-xl sm:text-2xl text-muted-foreground leading-relaxed text-pretty">
-						{t('hero.phrase')}
-					</p>
-
-					<Button
-						onClick={scrollToWork}
-						size="lg"
-						className="mt-8 bg-accent-blue hover:bg-accent-blue/90 text-white font-semibold px-8 py-6 text-lg group"
-					>
-						{t('hero.btn')}
-						<ArrowDownIcon className="ml-2 h-5 w-5 group-hover:translate-y-1 transition-transform" />
-					</Button>
-				</div>
-
-				<div className="flex justify-center items-center w-full min-h-80 sm:min-h-100 lg:min-h-120">
+				<div className="flex justify-center items-center w-full min-h-80 sm:min-h-100 lg:min-h-120 lg:col-start-2 lg:col-end-3">
 					<div className="relative w-70 h-70 sm:w-87.5 sm:h-87.5 lg:w-105 lg:h-105">
 						{/* Outer orbit ring */}
 						<div className="absolute inset-0 flex items-center justify-center">
@@ -291,7 +273,7 @@ export default function HeroSection({ locale }: Props) {
 						<div className="absolute inset-0 flex items-center justify-center">
 							<div className="w-32 sm:w-40 lg:w-48 min-h-40 sm:min-h-48 lg:min-h-56 bg-[#161b22] border border-[#30363d] rounded-xl shadow-2xl overflow-visible flex flex-col">
 								{/* Editor header */}
-								<div className="flex items-center gap-1 sm:gap-1.5 px-2 sm:px-3 py-1.5 sm:py-2 bg-[#0d1117] border-b border-[#30363d]">
+								<div className="flex items-center gap-1 sm:gap-1.5 px-2 sm:px-3 py-1.5 sm:py-2 bg-[#0d1117] border-b rounded-t-xl border-[#30363d]">
 									<div className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-[#ff5f56]" />
 									<div className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-[#ffbd2e]" />
 									<div className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-[#27ca40]" />
@@ -393,6 +375,26 @@ export default function HeroSection({ locale }: Props) {
 						</svg>
 					</div>
 				</div>
+
+				<div className="animate-fade-in lg:row-start-1 lg:col-start-1 lg:col-end-2">
+					<h1 className="text-4xl font-atkinson font-bold leading-tight text-balance z-50 relative sm:text-5xl lg:text-6xl">
+						<span>{t('hero.greeting')}</span> <span className="text-accent-blue">Julian</span>.
+					</h1>
+
+					<p className="mt-6 text-xl sm:text-2xl text-muted-foreground leading-relaxed text-pretty">
+						{t('hero.phrase')}
+					</p>
+
+					<Button
+						onClick={scrollToWork}
+						size="lg"
+						className="mt-8 bg-accent-blue hover:bg-accent-blue/90 text-white font-semibold px-8 py-6 text-lg group"
+					>
+						{t('hero.btn')}
+						<ArrowDownIcon className="ml-2 h-5 w-5 group-hover:translate-y-1 transition-transform" />
+					</Button>
+				</div>
+
 			</div>
 		</section>
 	)

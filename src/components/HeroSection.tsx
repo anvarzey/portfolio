@@ -157,8 +157,8 @@ export default function HeroSection({ locale }: Props) {
 		}
 	}, [])
 
-	const scrollToWork = () => {
-		document.getElementById("jobs")?.scrollIntoView({ behavior: "smooth" })
+	const handleScroll = (section: string) => {
+		document.getElementById(section)?.scrollIntoView({ behavior: "smooth" })
 	}
 
 	const orbitIcons = [
@@ -385,14 +385,25 @@ export default function HeroSection({ locale }: Props) {
 						{t('hero.phrase')}
 					</p>
 
-					<Button
-						onClick={scrollToWork}
-						size="lg"
-						className="mt-8 bg-accent-blue hover:bg-accent-blue/90 text-white font-semibold px-8 py-6 text-lg group"
-					>
-						{t('hero.btn')}
-						<ArrowDownIcon className="ml-2 h-5 w-5 group-hover:translate-y-1 transition-transform" />
-					</Button>
+					<div className="flex items-center gap-4 mt-8 flex-wrap">
+						<Button
+							onClick={() => handleScroll("jobs")}
+							size="lg"
+							variant="outline"
+							className="text-accent-blue border-accent-blue bg-transparent font-semibold px-8 py-6 text-lg group hover:bg-accent-blue/50"
+						>
+							{t('hero.btn.1')}
+							<ArrowDownIcon className="ml-2 h-5 w-5 group-hover:translate-y-1 transition-transform" />
+						</Button>
+						<Button
+							onClick={() => handleScroll("contact")}
+							size="lg"
+							className="bg-accent-blue hover:bg-accent-blue/90 text-white font-semibold px-8 py-6 text-lg group"
+						>
+							{t('hero.btn.2')}
+							<ArrowDownIcon className="ml-2 h-5 w-5 group-hover:translate-y-1 transition-transform" />
+						</Button>
+					</div>
 				</div>
 
 			</div>

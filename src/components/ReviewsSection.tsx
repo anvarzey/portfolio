@@ -70,10 +70,10 @@ export default function ReviewsSection({ locale }: Props) {
 				className={`max-w-4xl mx-auto transition-all duration-700 ${isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
 					}`}
 			>
-				<h2 className="text-3xl sm:text-4xl font-bold mb-4 text-center">
+				<h2 className="text-3xl sm:text-4xl font-bold mb-12 text-center">
 					<span>{t('reviews.title.1')}</span> <span className="text-accent-blue">{t('reviews.title.2')}</span>
 				</h2>
-				<p className="text-muted-foreground text-center mb-12">{t('reviews.subtitle')}</p>
+				{/* <p className="text-muted-foreground text-center mb-12">{t('reviews.subtitle')}</p> */}
 
 				<div className="relative">
 					<div className="overflow-hidden">

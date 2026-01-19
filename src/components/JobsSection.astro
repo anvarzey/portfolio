@@ -1,0 +1,116 @@
+---
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { defaultLang, ui } from "@/i18n/ui";
+import LuisaPortfolioHero from "@/images/luisa-portfolio-hero.webp";
+import RPTZENHero from "@/images/rptzen-hero.webp";
+import WListDBHero from "@/images/wlistdb-hero.webp";
+import { useTranslations } from "@/i18n/utils";
+import AnimatedSection from "./AnimatedSection";
+import { Image } from "astro:assets";
+
+const locale = (Astro.currentLocale as keyof typeof ui) ?? defaultLang;
+
+const { t } = useTranslations(locale);
+
+const jobs = [
+    {
+        title: "WListDB",
+        company: "Frontend Development",
+        image: WListDBHero,
+        achievements: [
+            "Redesign frontend side of the application based on Material UI",
+            "Build the new version using a modern tech stack",
+            "Optimize performance and SEO"
+        ],
+        techStack: ["React", "Next.js", "Typescript", "Material UI"],
+    },
+    {
+        title: "RPTZEN",
+        company: "SaaS Development",
+        image: RPTZENHero,
+        achievements: [
+            "Frontend development using a web template as starting point",
+            "Design and implementation of business logic and database structure",
+            "SEO optimization to improve search engine rankings",
+        ],
+        techStack: ["Laravel", "PHP", "MySQL", "Livewire", "Bootstrap"],
+    },
+    {
+        title: "Luisa's Portfolio",
+        company: "Full-Stack Development & Web Design",
+        image: LuisaPortfolioHero,
+        achievements: [
+            "Web design in line with client guidelines",
+            "Admin panel for content management",
+            "Flipbook to showcase stories interactively"
+        ],
+        techStack: ["Javascript", "PHP", "Figma", "HTML", "CSS"],
+    },
+];
+---
+
+<AnimatedSection
+    client:load
+    sectionId="jobs"
+    divClasses="max-w-6xl"
+    sectionClasses="py-24 px-4 sm:px-6 lg:px-8 bg-card-dark"
+>
+    <>
+        <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-center">
+            <span>{t("jobs.title.1")}</span>
+            <span class="text-accent-blue">{t("jobs.title.2")}</span>
+        </h2>
+        <p class="text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
+            {t("jobs.subtitle")}
+        </p>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {
+                jobs.map((job, index) => (
+                    <Card
+                        key={job.title}
+                        className="bg-card border-border hover:border-accent-blue/50 transition-all duration-300 overflow-hidden group"
+                        style={{ transitionDelay: `${index * 100}ms` }}
+                    >
+                        <div class="relative h-48 overflow-hidden">
+                            <Image
+                                src={job.image}
+                                alt={job.title}
+                                class="object-cover group-hover:scale-105 transition-transform duration-500"
+                            />
+                            <div class="absolute inset-0 bg-linear-to-t from-card to-transparent" />
+                        </div>
+
+                        <CardHeader className="pb-2">
+                            <h3 class="font-bold text-lg text-foreground">
+                                {job.title}
+                            </h3>
+                            <p class="text-accent-blue text-sm font-mono">
+                                {job.company}
+                            </p>
+                        </CardHeader>
+                        <CardContent className="space-y-4">
+                            <ul class="space-y-2 grow">
+                                {job.achievements.map((achievement, i) => (
+                                    <li class="text-sm text-muted-foreground flex items-start gap-2">
+                                        <span class="text-accent-blue mt-1">
+                                            •
+                                        </span>
+                                        {achievement}
+                                    </li>
+                                ))}
+                            </ul>
+                            <div class="flex flex-wrap gap-2 pt-2">
+                                {job.techStack.map((tech) => (
+                                    <span class="px-2 py-1 text-xs font-mono bg-accent-blue/10 text-accent-blue rounded-md border border-accent-blue/20">
+                                        {tech}
+                                    </span>
+                                ))}
+                            </div>
+                        </CardContent>
+                    </Card>
+                ))
+            }
+        </div>
+    </>
+</AnimatedSection>

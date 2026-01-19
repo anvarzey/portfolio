@@ -1,0 +1,75 @@
+---
+import { PiBracketsCurlyDuotone as SquareDuotoneIcon } from "react-icons/pi";
+
+import { Button } from "./ui/button";
+import { useTranslations } from "@/i18n/utils";
+import { defaultLang, ui } from "@/i18n/ui";
+import LanguageSwitcher from "./LanguageSwitcher";
+import { cn } from "@/lib/utils";
+
+const locale = (Astro.currentLocale as keyof typeof ui) ?? defaultLang;
+const { t } = useTranslations(locale);
+
+const navItems = [
+  {
+    id: "about",
+    label: t('nav.about')
+  },
+  {
+    id: "jobs",
+    label: t('nav.jobs')
+  },
+  {
+    id: "reviews",
+    label: t('nav.reviews')
+  },
+  {
+    id: "contact",
+    label: t('nav.contact')
+  },
+];
+---
+
+<header
+  class="fixed top-0 left-0 right-0 z-50 border-b border-border/20 bg-background/20 backdrop-blur-md shadow-sm"
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      {/* Left: Name and Logo */}
+      <a href="#hero" class="flex items-center gap-2">
+				 <SquareDuotoneIcon className="w-6 h-6 text-accent-blue" /> 
+        <span class="text-lg font-bold font-mono">Julian Varo</span>
+      </a>
+
+      {/* Center: Navigation */}
+      <nav class="hidden md:flex items-center gap-1">
+        {
+          navItems.map((item) => (
+            <Button
+              variant="ghost"
+              size="sm"
+              asChild
+              className="text-muted-foreground hover:text-foreground hover:bg-accent-blue/10"
+              >
+              <a
+              href={`#${item.id}`}
+              class={cn(
+                "text-muted-foreground hover:text-foreground hover:bg-accent-blue/10",
+                "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+                "hover:bg-accent hover:text-accent-foreground",
+                "h-8 rounded-md px-3 text-xs"
+              )}
+              >
+                {item.label}
+              </a>
+            </Button>
+          ))
+        }
+      </nav>
+      {/* Right: Language Switcher */}
+      <div class="flex items-center gap-1 bg-muted/50 rounded-lg p-1">
+        <LanguageSwitcher locale={locale} client:load />
+      </div>
+    </div>
+  </div>
+</header>

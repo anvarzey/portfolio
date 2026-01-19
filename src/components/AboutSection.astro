@@ -1,0 +1,94 @@
+---
+
+import { Image } from "astro:assets"
+import { defaultLang, ui } from "@/i18n/ui";
+import { useTranslations } from "@/i18n/utils";
+import AnimatedSection from "./AnimatedSection";
+
+const technologies = [
+    {
+        name: "Javascript",
+        color: "bg-yellow-500/20 text-yellow-400 border-yellow-500/30",
+    },
+    {
+        name: "Typescript",
+        color: "bg-accent-blue/20 text-accent-blue border-accent-blue/30",
+    },
+    {
+        name: "PHP",
+        color: "bg-purple-500/20 text-purple-400 border-purple-500/30",
+    },
+    { name: "React", color: "bg-cyan-500/20 text-cyan-400 border-cyan-500/30" },
+    { name: "Next.js", color: "bg-white/10 text-white border-white/20" },
+    { name: "Laravel", color: "bg-red-500/20 text-red-400 border-red-500/30" },
+];
+
+const locale = (Astro.currentLocale as keyof typeof ui) ?? defaultLang;
+
+const { t } = useTranslations(locale);
+---
+
+<AnimatedSection
+    sectionId="about"
+    sectionClasses="py-24 px-4 bg-transparent sm:px-6 lg:px-8"
+    divClasses="max-w-5xl"
+    client:load
+>
+    <h2 class="text-3xl sm:text-4xl font-bold mb-12 text-center">
+        <span>{t("about-me.title.1")}</span>
+        <span class="text-accent-blue">{t("about-me.title.2")}</span>
+    </h2>
+
+    <div class="grid md:grid-cols-3 gap-12 items-center">
+        <div class="flex justify-center md:justify-start">
+            <div class="relative">
+                <div
+                    class="w-48 h-60 rounded-2xl overflow-hidden border-2 border-accent-blue/30"
+                >
+                    <Image
+                        src="https://res.cloudinary.com/dfyxdowwb/image/upload/c_scale,q_auto:best,w_1000/v1728083392/pixlr_s4vmqp.webp"
+                        width={479}
+                        height={638}
+                        alt="Julian Varo"
+                        class="object-cover w-full h-full"
+                    />
+                </div>
+            </div>
+        </div>
+
+        <div class="md:col-span-2 space-y-6">
+			<p class="text-lg text-muted-foreground leading-relaxed">
+				{t('about-me.content.1')}
+                <span class="text-accent-blue font-semibold">
+					{t('about-me.content.1.bold')}
+				</span>
+
+				{t('about-me.content.1.bis')}
+			</p>
+			<p class="text-lg text-muted-foreground leading-relaxed">
+
+				{t('about-me.content.2')}
+</p>
+
+            <div class="pt-4">
+                <h3
+                    class="text-sm uppercase tracking-wider text-muted-foreground mb-4"
+                >
+                    {t('about-me.stack.title')}
+                </h3>
+                <div class="flex flex-wrap gap-3">
+                    {
+                        technologies.map((tech) => (
+                            <span
+                                class={`px-4 py-2 rounded-lg border font-mono text-sm ${tech.color} transition-transform hover:scale-105`}
+                            >
+                                {tech.name}
+                            </span>
+                        ))
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</AnimatedSection>
+
